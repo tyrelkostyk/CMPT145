@@ -92,10 +92,22 @@ for t in test_add:
 test_mean = [
     {'inputs' : [0,0,0,0,0],    # data values to be added
      'outputs': [5, 0],         #[count, avg]
-     'reason' : 'All zeroes'}
-    # {'inputs' : [-1,-1,-1,-1,-1],
-    # 'outputs' : []}
-
+     'reason' : 'All zeroes'},
+    {'inputs' : [0],
+     'outputs': [1,0],
+     'reason' : 'Add 1 value, no change to avg'},
+    {'inputs' : [-1,-1,-1,-1,-1],
+     'outputs': [5,-1],
+     'reason' : 'All -1'},
+    {'inputs' : [10,10,-10],
+     'outputs': [3,3],
+     'reason' : 'Mixed values(pos & neg), pos output'},
+    {'inputs' : [456,44,100],
+     'outputs': [3,200],
+     'reason' : 'Large pos values'},
+    {'inputs' : [-456,-44,-100],
+     'outputs': [3,-200],
+     'reason' : 'Large Neg values'}
     # TODO Add more test cases
 ]
 
