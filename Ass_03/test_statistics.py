@@ -41,9 +41,26 @@ for t in test_create:
 
 test_add = [
     {'inputs' : [0],    # single value to be added
-     'outputs':[1, 0], # [count, avg]
+     'outputs': [1, 0], # [count, avg]
      'reason' : 'No change to avg'},
-    # TODO Add more test cases
+    {'inputs' : [1],
+     'outputs': [1,1],
+     'reason' : 'Value should equal avg'},
+    {'inputs' : [-1],
+     'outputs': [1,-1],
+     'reason' : 'Negative value should equal avg'},
+    {'inputs' : [10.89],
+     'outputs': [1,10.89],
+     'reason' : 'Float change in avg'},
+    {'inputs' : [-10.89],
+     'outputs': [1,-10.89],
+     'reason' : 'Negative Float change in avg'},
+    {'inputs' : [342352],
+     'outputs': [1,342352],
+     'reason' : 'Dramatically change in avg'},
+    {'inputs' : [-342352],
+     'outputs': [1,-342352],
+     'reason' : 'Dramatic Negative change in avg'}
 ]
 
 for t in test_add:
@@ -74,8 +91,10 @@ for t in test_add:
 
 test_mean = [
     {'inputs' : [0,0,0,0,0],    # data values to be added
-     'outputs':[5, 0],          #[count, avg]
-     'reason' : 'All zeroes'},
+     'outputs': [5, 0],         #[count, avg]
+     'reason' : 'All zeroes'}
+    # {'inputs' : [-1,-1,-1,-1,-1],
+    # 'outputs' : []}
 
     # TODO Add more test cases
 ]
