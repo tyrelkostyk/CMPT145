@@ -17,6 +17,7 @@ def create():
     b = {}
     b['count'] = 0      # how many data values have been seen
     b['avg'] = 0        # the running average so far
+    b['max'] = None
     return b
 
 
@@ -33,9 +34,12 @@ def add(stat, value):
         none
     """
     stat['count'] += 1
+
     k = stat['count']           # convenience
     diff = value - stat['avg']  # convenience
     stat['avg'] += diff/k
+
+    stat['max'] = max(stat['max'], value)
 
 
 def mean(stat):
@@ -53,6 +57,7 @@ def mean(stat):
     """
     return stat['avg']
 
+
 def count(stat):
     """
     Purpose:
@@ -65,3 +70,17 @@ def count(stat):
         The number of data values seen so far.
     """
     return stat['count']
+
+
+def maximum(stat):
+    """
+    Purpose:
+        Returns the highest value seen thus far by the stat (None, if no data has been seen)
+    Pre-conditions:
+        stat: the Statistics record
+    Post-conditions:
+        (none)
+    Return:
+        The highest data value seen so far.
+    """
+    return stat['max']

@@ -1,3 +1,9 @@
 ## Tyrel Kostyk, tck290, 11216033
 ## CMPT145-04, Lab04
 ## a3, due Friday Feb 2nd 10pm
+
+# Changes:
+1. Created count(stat) function, returns stat['count']
+2. Created maximum(stat) function, added functionality for it by initializing the
+    'max' key within the stat in the create() function, and updating it in add()
+3.
