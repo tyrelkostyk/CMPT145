@@ -34,7 +34,6 @@ def create():
     """
     x = {}
     x['total'] = 0
-    x['unique'] = 0
     return x
 
 
@@ -48,8 +47,13 @@ def see(counter, value):
     Return:
         None
     """
-    # To-do: Replace this stub with something useful.
-    return None
+    counter['total'] += 1
+
+    if str(value) not in counter:
+        counter[str(value)] = 1
+    elif str(value) in counter:
+        counter[str(value)] += 1
+    return
 
 
 def seen(counter, value):
