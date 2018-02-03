@@ -40,6 +40,7 @@ def add(stat, value):
     stat['avg'] += diff/k
 
     stat['max'] = max(stat['max'], value)
+    return
 
 
 def mean(stat):

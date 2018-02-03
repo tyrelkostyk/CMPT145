@@ -11,20 +11,20 @@ import a3q2 as Stat
 # test Statistics.count()
 
 test_count = [
-    {'inputs' : [0],
-     'outputs': [1, 0],
+    {'inputs' : [0],    # data value(s) to be added
+     'outputs': 1,      # number of data value(s) encountered
      'reason' : 'Add single zero, mean unchanged'},
     {'inputs' : [0,0,0],
-     'outputs': [3, 0],
+     'outputs': 3,
      'reason' : 'Add multiple zeroes, mean unchanged'},
     {'inputs' : [5,5,20],
-     'outputs': [3, 10],
+     'outputs': 3,
      'reason' : 'Add multiple pos values'},
     {'inputs' : [-10,-10,-10],
-     'outputs': [3, -10],
+     'outputs': 3,
      'reason' : 'Add multiple neg values'},
     {'inputs' : [],
-     'outputs': [0, 0],
+     'outputs': 0,
      'reason' : 'Add empty list as value'}
 ]
 
@@ -41,21 +41,53 @@ for t in test_count:
     # now call count()
     result = Stat.count(thing)
 
-    # we'll open the data structure in these tests
-    # check the count from the add() function
-    if thing['count'] != expected[0]:
-        print('Error in add(): expected count', expected[0],
-              ' but found ', thing['count'], '--', t['reason'])
+    # finally, check the result of count()
+    if result != expected:
+        print('Error in count(): expected count', expected,
+              ' but found ', result, '---', t['reason'])
 
-    # check the ave from the add() function
-    if thing['avg'] != expected[1]:
-        print('Error in add(): expected avg', expected[1],
-              ' but found ', thing['avg'], '--', t['reason'])
+#####################################################################
+# test Statistics.add()
 
-    # check the result of count()
-    if result != expected[0]:
-        print('Error in count(): expected count', expected[0],
-              ' but found ', result, '--', t['reason'])
+test_maximum = [
+    {'inputs' : [5],
+     'outputs': 5,
+     'reason' : 'Add single value, max becomes that value'},
+    {'inputs' : [],
+     'outputs': None,
+     'reason' : 'Add empty value, max remains None'},
+    {'inputs' : [0],
+     'outputs': 0,
+     'reason' : 'Add 0, max becomes 0'},
+    {'inputs' : [1,5,22],
+     'outputs': 22,
+     'reason' : 'Add multiple values, max becomes highest(22)'},
+    {'inputs' : [-5,-44,10,30],
+     'outputs': 30,
+     'reason' : 'Add multiple values (pos & neg), max highest pos value'},
+    {'inputs' : [-70,-44,-6],
+     'outputs': -6,
+     'reason' : 'Add multiple neg values, max "highest" neg value'}
+]
+
+for t in test_maximum:
+    args_in = t['inputs']
+    expected = t['outputs']
+
+    # create the Statistics data structure
+    thing = Stat.create()
+    # add the given values to the stat
+    for val in args_in:
+        Stat.add(thing, val)
+
+    # now call maximum()
+    result = Stat.maximum(thing)
+
+    # finally, check the result of maximum()
+    if result != expected:
+        print('Error in count(): expected count', expected,
+              ' but found ', result, '---', t['reason'])
+
 
 #####################################################################
 ## OLD TEST CASES (STILL BEING USED)
@@ -81,13 +113,12 @@ for t in test_create:
     # check the initial count
     if thing['count'] != expected[0]:
         print('Error in create(): expected count', expected[0],
-              ' but found ', thing['count'], '--', t['reason'])
+              ' but found ', thing['count'], '---', t['reason'])
 
     # check the initial ave
     if thing['avg'] != expected[1]:
         print('Error in create(): expected avg', expected[1],
-              ' but found ', thing['avg'], '--', t['reason'])
-
+              ' but found ', thing['avg'], '---', t['reason'])
 
 
 #####################################################################
@@ -132,13 +163,12 @@ for t in test_add:
     # check the count
     if thing['count'] != expected[0]:
         print('Error in add(): expected count', expected[0],
-              ' but found ', thing['count'], '--', t['reason'])
+              ' but found ', thing['count'], '---', t['reason'])
 
     # check the ave
     if thing['avg'] != expected[1]:
         print('Error in add(): expected avg', expected[1],
-              ' but found ', thing['avg'], '--', t['reason'])
-
+              ' but found ', thing['avg'], '---', t['reason'])
 
 
 #####################################################################
@@ -185,16 +215,16 @@ for t in test_mean:
     # check the count
     if thing['count'] != expected[0]:
         print('Error in add(): expected count', expected[0],
-              ' but found ', thing['count'], '--', t['reason'])
+              ' but found ', thing['count'], '---', t['reason'])
 
     # check the ave
     if thing['avg'] != expected[1]:
         print('Error in add(): expected avg', expected[1],
-              ' but found ', thing['avg'], '--', t['reason'])
+              ' but found ', thing['avg'], '---', t['reason'])
 
     # check the result of mean()
     if result != expected[1]:
         print('Error in mean(): expected avg', expected[1],
-              ' but found ', result, '--', t['reason'])
+              ' but found ', result, '---', t['reason'])
 
 print('*** Test script completed ***')
