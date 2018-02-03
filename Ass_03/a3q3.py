@@ -66,8 +66,10 @@ def seen(counter, value):
     Return:
         The number of times the value was seen.
     """
-    # To-do: Replace this stub with something useful.
-    return 0
+    if str(value) in counter:
+        return counter[str(value)]
+    else:
+        return 0
 
 
 def size(counter):
@@ -79,8 +81,7 @@ def size(counter):
     Return:
         The number of unique values seen.
     """
-    # To-do: Replace this stub with something useful.
-    return 0
+    return len(counter) - 1
 
 
 def total(counter):
@@ -93,7 +94,7 @@ def total(counter):
         The total number of values seen.
     """
     # To-do: Replace this stub with something useful.
-    return 0
+    return counter['total']
 
 def unique(counter):
     """
@@ -103,4 +104,6 @@ def unique(counter):
     Return:
         A list containing all the unique values seen by the counter.
     """
-    return []
+    unique = counter
+    del unique['total']
+    return [k for k in unique]

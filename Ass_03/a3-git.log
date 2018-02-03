@@ -1,0 +1,112 @@
+## Tyrel Kostyk, tck290, 11216033
+## CMPT145-04, Lab04
+## a3, due Friday Feb 2nd 10pm
+
+# NOTE: I don't use pyCharm, so I don't use it's version of Git. Instead I use
+# my own preferred version (Git Bash). Same thing, slightly different look
+## ALSO: It's in descending order
+
+################################################################################
+commit a76d4dbf68dee8c08911398283436c8bd9d2f3eb (HEAD -> master, origin/master,                                                                                                     origin/HEAD)
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Fri Feb 2 21:22:24 2018 -0600
+
+    added support for see() functions along with some test cases (some errors de                                                                                                    tected)
+
+commit dba631bb590e22621c97d4171b2be15932c1e6f7
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Fri Feb 2 20:43:43 2018 -0600
+
+    Renamed Counter.py to a3q3.py, added support for create() function and added                                                                                                     test cases for it (no errors detected)
+
+commit c71893d4beef86c605f50549aa084d0773db47cc
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Fri Feb 2 20:09:01 2018 -0600
+
+    Added test cases for minimum(stat) function, and fixed minor bug in a3q2.py                                                                                                     being caused by issues with evaluating max/min of None
+
+commit 94c76cebc091f9d45baf3163f1bd1ae64747501e
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Fri Feb 2 19:51:24 2018 -0600
+
+    Add functionality for minimum(stat) in a3q2.py, and recorded the changes in                                                                                                     changes.txt
+
+commit cb342472235e969117e98919b906b1682784b6d8
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Fri Feb 2 19:46:46 2018 -0600
+
+    Minor changes to a3q2.py, added testing for maximum(). No errors found
+
+commit caeff79bcb6ec30f9a826ba1b4d56915eace858f
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Fri Feb 2 19:30:00 2018 -0600
+
+    Added support for maximum(stat) function. Updated a3q2_changes.txt
+
+commit aa9e2b75f3b09df53786ccd4b14d0536d5b489d7
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Fri Feb 2 19:19:14 2018 -0600
+
+    Added test cases for count() function in a3q2.py
+
+commit fd2c634befa49e223fdac9237a1e1eb4e5e7f3ee
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Thu Feb 1 22:19:04 2018 -0600
+
+    Added 1st draft of count(data) function for a3q2.py
+
+commit 99d8d2447eb73a23d9373547a76f6384cc6269d5
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Thu Feb 1 22:11:13 2018 -0600
+
+    Created files for 2nd question, and added name & student ID to all files
+
+commit bb7964d2f63612cb02920e8a20a92b89d22488db
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Thu Feb 1 18:26:48 2018 -0600
+
+    Renamed test_statistics.py to a3q1_testing.py
+
+commit be582bd77fb8f21754e20f461b0ff8a5696ab804
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Thu Feb 1 18:15:12 2018 -0600
+
+    Added more test cases for Mean function from statistics,py
+:
+    Added test cases for count() function in a3q2.py
+
+commit fd2c634befa49e223fdac9237a1e1eb4e5e7f3ee
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Thu Feb 1 22:19:04 2018 -0600
+
+    Added 1st draft of count(data) function for a3q2.py
+
+commit 99d8d2447eb73a23d9373547a76f6384cc6269d5
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Thu Feb 1 22:11:13 2018 -0600
+
+    Created files for 2nd question, and added name & student ID to all files
+
+commit bb7964d2f63612cb02920e8a20a92b89d22488db
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Thu Feb 1 18:26:48 2018 -0600
+
+    Renamed test_statistics.py to a3q1_testing.py
+
+commit be582bd77fb8f21754e20f461b0ff8a5696ab804
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Thu Feb 1 18:15:12 2018 -0600
+
+    Added more test cases for Mean function from statistics,py
+
+commit ae252385beb06c9ca9aa6cb9f0655d38de0138c5
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Thu Feb 1 18:44:39 2018 -0600
+
+    Finished adding more test cases for Add function in statistics.py
+
+commit 3cb1ddd1d15bb41fd9c96d8b5ee052fabe664431
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Thu Feb 1 17:51:58 2018 -0600
+
+    Initialized Ass_03 Folder
