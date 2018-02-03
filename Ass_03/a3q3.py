@@ -1,3 +1,7 @@
+## Tyrel Kostyk, tck290, 11216033
+## CMPT145-04, Lab04
+## a3, due Friday Feb 2nd 10pm
+
 # CMPT 145: ADTs
 # Implement a simple ADT
 #
@@ -28,8 +32,10 @@ def create():
     Return:
          A reference to a data structure.
     """
-    # To-do: Replace this stub with something useful.
-    return None
+    x = {}
+    x['total'] = 0
+    x['unique'] = 0
+    return x
 
 
 def see(counter, value):
