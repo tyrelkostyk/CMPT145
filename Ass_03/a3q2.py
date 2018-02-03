@@ -18,6 +18,7 @@ def create():
     b['count'] = 0      # how many data values have been seen
     b['avg'] = 0        # the running average so far
     b['max'] = None
+    b['min'] = None
     return b
 
 
@@ -40,6 +41,7 @@ def add(stat, value):
     stat['avg'] += diff/k
 
     stat['max'] = max(stat['max'], value)
+    stat['min'] = min(stat['min'], value)
     return
 
 
@@ -85,3 +87,17 @@ def maximum(stat):
         The highest data value seen so far.
     """
     return stat['max']
+
+
+def minimum(stat):
+    """
+    Purpose:
+        Returns the lowest value seen thus far by the stat (None, if no data has been seen)
+    Pre-conditions:
+        stat: the Statistics record
+    Post-conditions:
+        (none)
+    Return:
+        The lowest data value seen so far.
+    """
+    return stat['min']

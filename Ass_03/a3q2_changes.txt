@@ -4,6 +4,7 @@
 
 # Changes:
 1. Created count(stat) function, returns stat['count']
-2. Created maximum(stat) function, added functionality for it by initializing the
+2. Created maximum(stat) function. Added functionality for it by initializing the
     'max' key within the stat in the create() function, and updating it in add()
-3.
+3. Created minimum(stat) function. Added functionality for it by initializing the
+    'min' key within the stat in the create() function, and updating it in add()
