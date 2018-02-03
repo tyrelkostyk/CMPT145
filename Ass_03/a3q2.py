@@ -40,8 +40,15 @@ def add(stat, value):
     diff = value - stat['avg']  # convenience
     stat['avg'] += diff/k
 
-    stat['max'] = max(stat['max'], value)
-    stat['min'] = min(stat['min'], value)
+    if stat['max'] == None:
+        stat['max'] = value
+    else:
+        stat['max'] = max(stat['max'], value)
+
+    if stat['min'] == None:
+        stat['min'] = value
+    else:
+        stat['min'] = min(stat['min'], value)
     return
 
 

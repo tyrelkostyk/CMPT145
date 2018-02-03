@@ -47,7 +47,7 @@ for t in test_count:
               ' but found ', result, '---', t['reason'])
 
 #####################################################################
-# test Statistics.add()
+# test Statistics.maximum()
 
 test_maximum = [
     {'inputs' : [5],
@@ -85,7 +85,50 @@ for t in test_maximum:
 
     # finally, check the result of maximum()
     if result != expected:
-        print('Error in count(): expected count', expected,
+        print('Error in maximum(): expected max to be', expected,
+              ' but found ', result, '---', t['reason'])
+
+
+#####################################################################
+# test Statistics.minimum()
+
+test_minimum = [
+    {'inputs' : [5],
+     'outputs': 5,
+     'reason' : 'Add single value, min becomes that value'},
+    {'inputs' : [],
+     'outputs': None,
+     'reason' : 'Add empty value, min remains None'},
+    {'inputs' : [0],
+     'outputs': 0,
+     'reason' : 'Add 0, min becomes 0'},
+    {'inputs' : [3,35,22],
+     'outputs': 3,
+     'reason' : 'Add multiple values, min becomes lowest(3)'},
+    {'inputs' : [0,-44,10,30,66],
+     'outputs': -44,
+     'reason' : 'Add multiple values (zero, pos, & neg), min is "largest" neg value'},
+    {'inputs' : [-70,-44,-6],
+     'outputs': -70,
+     'reason' : 'Add multiple neg values, min is "largest" neg value'}
+]
+
+for t in test_minimum:
+    args_in = t['inputs']
+    expected = t['outputs']
+
+    # create the Statistics data structure
+    thing = Stat.create()
+    # add the given values to the stat
+    for val in args_in:
+        Stat.add(thing, val)
+
+    # now call minimum()
+    result = Stat.minimum(thing)
+
+    # finally, check the result of minimum()
+    if result != expected:
+        print('Error in minimum(): expected min to be', expected,
               ' but found ', result, '---', t['reason'])
 
 
