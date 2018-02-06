@@ -6,14 +6,16 @@ import TQueue as Queue
 import TStack as Stack
 import isfloat
 
-
 def calculator(expression):
     '''
     Simple calculator that solves basic algbraic expressions involing the four main operators
+
     :params:
     expression - str, basic algbraic statement. REQUIRES parantheses around each operator and
         a space around each character
-    :returns: numeric value, algebraic result of expression
+
+    :returns:
+    result - float, algebraic result of expression
     '''
     # inintialize stacks, queues
     numStack = Stack.create()
@@ -30,28 +32,26 @@ def calculator(expression):
     # Fill our stacks; evaluate
     while not Queue.is_empty(exprQueue):
         char = Queue.dequeue(exprQueue)
-        if char in ('1','2','3','4','5','6','7','8','9','0'):
+        # If char is a number, push onto the numStack
+        if isfloat.isfloat(char):
             Stack.push(numStack, char)
+        # If char is an operation, push onto the opStack
         elif char in ('+','-','*','/'):
             Stack.push(opStack, char)
+        # If char is ')', perform operation between next 2 values using next operation
         elif char == ')':
             num1 = float(Stack.pop(numStack))
             num2 = float(Stack.pop(numStack))
             op = Stack.pop(opStack)
             if op == '+':
                 result = num1 + num2
-                Stack.push(numStack, result)
             elif op == '-':
                 result = num1 - num2
-                Stack.push(numStack, result)
             elif op == '*':
                 result = num1 * num2
-                Stack.push(numStack, result)
             elif op == '/':
                 result = num1 / num2
-                Stack.push(numStack, result)
+            Stack.push(numStack, result)
 
-    return
-
-example = '( 1 + 1 )'
-calculator(example)
+    result = Stack.pop(numStack)
+    return result
