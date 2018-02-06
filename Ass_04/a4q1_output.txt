@@ -1,3 +1,33 @@
 ## Tyrel Kostyk, tck290, 11216033
 ## CMPT145-04, Lab Section 04
 ## a4, due Friday Feb 9th 10pm
+
+### a4q1.py Output from months.txt:
+C:\Users\Tyrel\CMPT145\Ass_04>python a4q1.py "months.txt"
+December
+November
+October
+September
+August
+July
+June
+May
+April
+March
+February
+January
+
+###  a4q1.py Output from numbers.txt:
+C:\Users\Tyrel\CMPT145\Ass_04>python a4q1.py "numbers.txt"
+90
+78
+56
+34
+89
+67
+45
+23
+78
+56
+34
+12
