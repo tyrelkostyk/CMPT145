@@ -13,3 +13,9 @@ C:\Users\Tyrel\CMPT145\Ass_04>python a4q1.py "numbers.txt"
 90 78 56 34
 89 67 45 23
 78 56 34 12
+
+###  a4q1.py Output from a4q1_testfile.txt:
+C:\Users\Tyrel\CMPT145\Ass_04>python a4q1.py "a4q1_testfile.txt"
+Refrigerator
+reversed once sense make won't probably This
+Tyrel is name my Hello
