@@ -1,3 +1,68 @@
 ## Tyrel Kostyk, tck290, 11216033
 ## CMPT145-04, Lab Section 04
-## a4, due Friday Feb 9th 10pm
+## a4-git.log, due Friday Feb 9th 10pm
+
+### NOTE TO MARKER: I don't use PyCharm (I prefer Atom). I also use my own preferred
+method of version control using Git Bash (on GitHub). This is why my format may look
+slightly different than what you're expecting. PS; they're in descending order (most
+recent on top)
+
+####################################################################################
+####################################################################################
+
+commit 78523db5ea7d13e5c0b608cc6111ec67d8e3b295
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Feb 6 15:00:46 2018 -0600
+
+    Fixed small error in a4q2 (improper order of popping numbers). Added full test
+    script, function working as expected
+
+commit 02945c653e3f3a564f8e4ddea9021ea7801475bf
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Feb 6 12:35:38 2018 -0600
+
+    Finished 2nd draft of a4q2.py; working now
+
+commit ac423b08b1944ce353c20977b3462a9d05d96a5f
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Feb 6 12:17:19 2018 -0600
+
+    1st draft of a4q2.py, close to having a working program
+
+commit 9e4394f150ab5a2ce4c99707fa981438523d292a
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Feb 6 10:54:17 2018 -0600
+
+    Added 3rd test file txt doc, and showed its working output in a4q1_output.txt.
+    Didn't realize 3 test cases were needed
+
+commit eb819264c919430ec456ff6c25e9946f6a411400
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Feb 6 10:39:04 2018 -0600
+
+    Added output for both months.txt & numbers.txt. Script working correctly; q1
+    afinished
+
+commit 371eb762ab605a0ff814f870c8d3b4ad4569b3ba
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Feb 6 10:36:43 2018 -0600
+
+    Finished 2nd draft, found and fixed printing mistake
+
+commit ead6e020039549fc3c6fb154aad465f863f18a83
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Feb 6 10:29:33 2018 -0600
+
+    Added output for 1st draft of a4q1.py
+
+commit cfaa6581678d23cc5d51d73179e89864051a9b14
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Feb 6 10:26:46 2018 -0600
+
+    Finished 1st draft fof a4q1.py, almost works
+
+commit 231d1209a760bc3712d0c72a52ac408a200d0a07
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Feb 6 09:17:23 2018 -0600
+
+    Initialized all files for questions 0 & 1

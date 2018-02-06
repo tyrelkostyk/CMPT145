@@ -1,6 +1,6 @@
 ## Tyrel Kostyk, tck290, 11216033
 ## CMPT145-04, Lab Section 04
-## a4, due Friday Feb 9th 10pm
+## a4q2.py, due Friday Feb 9th 10pm
 
 import TQueue as Queue
 import TStack as Stack
