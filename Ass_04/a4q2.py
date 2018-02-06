@@ -29,7 +29,7 @@ def calculator(expression):
         # print(char)
         Queue.enqueue(exprQueue, char)
 
-    # Fill our stacks; evaluate
+    # Fill the stacks; evaluate
     while not Queue.is_empty(exprQueue):
         char = Queue.dequeue(exprQueue)
         # If char is a number, push onto the numStack
@@ -40,8 +40,8 @@ def calculator(expression):
             Stack.push(opStack, char)
         # If char is ')', perform operation between next 2 values using next operation
         elif char == ')':
-            num1 = float(Stack.pop(numStack))
             num2 = float(Stack.pop(numStack))
+            num1 = float(Stack.pop(numStack))
             op = Stack.pop(opStack)
             if op == '+':
                 result = num1 + num2
