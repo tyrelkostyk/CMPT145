@@ -10,9 +10,15 @@ recent on top)
 ####################################################################################
 ####################################################################################
 
+commit f3a64cd45920aad0302ea3f17afba2d626fe26bd (HEAD -> master, origin/master, origin/HEAD)
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Feb 6 16:58:24 2018 -0600
+
+    Finished a4q3 & demo'd its output
+
 commit 78523db5ea7d13e5c0b608cc6111ec67d8e3b295
 Author: tyrelkostyk <tck290@mail.usask.ca>
-Date:   Tue Feb 6 15:00:46 2018 -0600
+Date:   Tue Feb 6 15:37:46 2018 -0600
 
     Fixed small error in a4q2 (improper order of popping numbers). Added full test
     script, function working as expected

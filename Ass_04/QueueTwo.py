@@ -1,13 +1,6 @@
-# CMPT 145: Linear ADTs
-# Defines the Queue ADT
-#
-# A queue (also called a FIFO queue) is a compound data structure
-# in which the data values are ordered according to the FIFO
-# (first-in first-out) protocol.
-#
-# Implementation notes:
-# This implementation uses two stacks.
-
+## Tyrel Kostyk, tck290, 11216033
+## CMPT145-04, Lab Section 04
+## a4q1.py, due Friday Feb 9th 10pm
 
 import TStack as Stack
 
@@ -91,4 +84,3 @@ def peek(queue):
         the value at the front of the queue
     """
     return None
-
