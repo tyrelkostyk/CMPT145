@@ -14,7 +14,9 @@ def create():
     """
     q2 = {}
     q2['e-stack'] = Stack.create()
+    print('e-stack:', q2['e-stack'])
     q2['d-stack'] = Stack.create()
+    print('d-stack:', q2['d-stack'])
     return q2
 
 
@@ -39,7 +41,8 @@ def size(queue):
     Return:
         The number of data values in the queue
     """
-    return 0
+    print('size:', max(len(queue['e-stack'])-2, len(queue['d-stack'])-2))
+    return max(len(queue['e-stack'])-2, len(queue['d-stack'])-2)
 
 
 def enqueue(queue, value):
@@ -54,6 +57,14 @@ def enqueue(queue, value):
     Return:
         (none)
     """
+    print('d-stack:', queue['d-stack'])
+    if len(queue['d-stack'])-2 == 0:
+        Stack.push(queue['e-stack'], value)
+    elif len(queue['d-stack'])-2 > 0:
+        for i in range(len(queue['d-stack'])):
+            tmp = Stack.pop(queue['d-stack'])
+            Stack.push(queue['e-stack'], tmp)
+        Stack.push(queue['e-stack'], value)
     return
 
 
@@ -67,7 +78,15 @@ def dequeue(queue):
         the first value is removed from the queue
     Return:
         the first value in the queue
-        """
+    """
+    print('e-stack:', queue['e-stack'])
+    if len(queue['e-stack']) == 0:
+        return Stack.pop(queue['e-stack'])
+    else:
+        for i in range(len(queue['e-stack'])):
+            tmp = Stack.pop(queue['e-stack'])
+            Stack.push(queue['d-stack'], tmp)
+        return Stack.pop(queue['d-stack'], value)
     return None
 
 

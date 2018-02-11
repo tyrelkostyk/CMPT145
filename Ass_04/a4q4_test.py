@@ -8,7 +8,7 @@ import QueueTwo as Queue
 ## NOTE: There's no point in formally testing enqueue() by itself(no outputs)
 ## so I'm simply testing every other function, which by definition also tests
 ## enqueue()
-
+'''
 ##############################################################################
 ### Testing: is_empty() && enqueue()
 test_is_empty = [
@@ -58,7 +58,7 @@ test_size = [
      'reason' : 'Added six items, some Negative'}
 ]
 
-# loop over every test case in test_is_empty
+# loop over every test case in test_size
 for t in test_size:
     args_in = t['inputs']
     expected = t['outputs']
@@ -73,9 +73,9 @@ for t in test_size:
     result = Queue.size(thing)
 
     if result != expected:
-        print('Error in size(): expected output', expected,
               'but found', result, '---', t['reason'])
-
+              print('Error in size(): expected output', expected,
+'''
 ##############################################################################
 ### Testing: dequeue() && enqueue()
 test_dequeue = [
@@ -85,28 +85,30 @@ test_dequeue = [
     {'inputs' : [3],
      'outputs': [3],
      'reason' : 'Added one item'},
-    {'inputs' : [9,1,2,3],
-     'outputs': [9,1,2,3],
-     'reason' : 'Added four items'},
-    {'inputs' : [23,45,-77,-1245,22,0],
-     'outputs': [23,45,-77,-1245,22,0],
-     'reason' : 'Added six items, some Negative'}
+    # {'inputs' : [9,1,2,3],
+    #  'outputs': [9,1,2,3],
+    #  'reason' : 'Added four items'},
+    # {'inputs' : [23,45,-77,-1245,22,0],
+    #  'outputs': [23,45,-77,-1245,22,0],
+    #  'reason' : 'Added six items, some Negative'}
 ]
 
 # loop over every test case in test_dequeue
 for t in test_dequeue:
     args_in = t['inputs']
+    print('reason:', t['reason'])
     expected = t['outputs']
 
     # initialize function data structure (if needed)
     thing = Queue.create()
     # use the inputs
     for val in args_in:
+        print('val:', val)
         Queue.enqueue(thing, val)
 
     # now call your function
     result = []
-    for val in range(Queue.size(thing)):
+    for val in range(len(thing['e-stack'])-2):
         result.append(Queue.dequeue(thing))
 
     if result != expected:
