@@ -85,30 +85,28 @@ test_dequeue = [
     {'inputs' : [3],
      'outputs': [3],
      'reason' : 'Added one item'},
-    # {'inputs' : [9,1,2,3],
-    #  'outputs': [9,1,2,3],
-    #  'reason' : 'Added four items'},
-    # {'inputs' : [23,45,-77,-1245,22,0],
-    #  'outputs': [23,45,-77,-1245,22,0],
-    #  'reason' : 'Added six items, some Negative'}
+    {'inputs' : [9,1,2,3],
+     'outputs': [9,1,2,3],
+     'reason' : 'Added four items'},
+    {'inputs' : [23,45,-77,-1245,22,0],
+     'outputs': [23,45,-77,-1245,22,0],
+     'reason' : 'Added six items, some Negative'}
 ]
 
 # loop over every test case in test_dequeue
 for t in test_dequeue:
     args_in = t['inputs']
-    print('reason:', t['reason'])
     expected = t['outputs']
 
     # initialize function data structure (if needed)
     thing = Queue.create()
     # use the inputs
     for val in args_in:
-        print('val:', val)
         Queue.enqueue(thing, val)
 
     # now call your function
     result = []
-    for val in range(len(thing['e-stack'])-2):
+    for val in range(len(args_in)):
         result.append(Queue.dequeue(thing))
 
     if result != expected:

@@ -57,11 +57,10 @@ def enqueue(queue, value):
     Return:
         (none)
     """
-    print('d-stack:', queue['d-stack'])
     if len(queue['d-stack'])-2 == 0:
         Stack.push(queue['e-stack'], value)
     elif len(queue['d-stack'])-2 > 0:
-        for i in range(len(queue['d-stack'])):
+        for i in range(len(queue['d-stack']) - 2):
             tmp = Stack.pop(queue['d-stack'])
             Stack.push(queue['e-stack'], tmp)
         Stack.push(queue['e-stack'], value)
@@ -79,11 +78,10 @@ def dequeue(queue):
     Return:
         the first value in the queue
     """
-    print('e-stack:', queue['e-stack'])
-    if len(queue['e-stack']) == 0:
+    if len(queue['e-stack'])-2 == 0:
         return Stack.pop(queue['e-stack'])
-    else:
-        for i in range(len(queue['e-stack'])):
+    elif len(queue['e-stack'])-2 > 0:
+        for i in range(len(queue['e-stack']) - 2):
             tmp = Stack.pop(queue['e-stack'])
             Stack.push(queue['d-stack'], tmp)
         return Stack.pop(queue['d-stack'], value)

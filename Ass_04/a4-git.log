@@ -9,8 +9,20 @@ recent on top)
 
 ####################################################################################
 ####################################################################################
+commit e319b59cc40292ed8cc26c1c074ad8fe03b54508
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sun Feb 11 00:12:53 2018 -0600
 
-commit f3a64cd45920aad0302ea3f17afba2d626fe26bd (HEAD -> master, origin/master, origin/HEAD)
+    Wrote first draft of QueueTwo.py mod, and began testing. Not much luck so far.
+
+commit 44045d175392a98d8850669d1e5d43f222b7c323
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Feb 10 23:32:58 2018 -0600
+
+    Finished setting up a4q4_test.py, using the TQueue module as 'Queue' for
+    seamless testing with QueueTwo.py
+
+commit f3a64cd45920aad0302ea3f17afba2d626fe26bd
 Author: tyrelkostyk <tck290@mail.usask.ca>
 Date:   Tue Feb 6 16:58:24 2018 -0600
 
