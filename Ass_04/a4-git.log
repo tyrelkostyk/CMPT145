@@ -9,6 +9,15 @@ recent on top)
 
 ####################################################################################
 ####################################################################################
+
+commit 664259769aa6a0aa8bb57a87443cef2437343884 (HEAD -> master, origin/master, origin/HEAD)
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sun Feb 11 21:44:34 2018 -0600
+
+    Updated QueueTwo.py & test script. Now works on any deque process with less
+    than 1 value being added at a time. Doesn't reverse back to queue format
+    otherwise though.
+
 commit e319b59cc40292ed8cc26c1c074ad8fe03b54508
 Author: tyrelkostyk <tck290@mail.usask.ca>
 Date:   Sun Feb 11 00:12:53 2018 -0600
