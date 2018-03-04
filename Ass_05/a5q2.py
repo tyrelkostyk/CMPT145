@@ -35,7 +35,19 @@ def copy_chain(node_chain):
     Return:
         :return: A copy of node chain, with new nodes, but the same data.
     """
-    return None
+    if node_chain is None:
+        new_chain = None
+        return new_chain
+    else:
+        walker = node_chain
+        new_chain = node.create(node.get_data(walker))
+        while walker is not None:
+            walker = node.get_next(walker)
+            if walker is not None:
+                next_node = node.create(node.get_data(walker))
+                node.set_next(new_chain, next_node)
+
+    return new_chain
 
 
 def replace(node_chain, target, value):

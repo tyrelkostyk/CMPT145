@@ -30,7 +30,7 @@ for t in test_count_chain:
     result = a5q2.count_chain(args_in)
     assert result == expected, 'count_chain(): got '\
         +str(result)+' expected '+str(expected)+' -- ' +t['reason']
-'''
+
 test_copy_chain = [
     {'inputs' : None,
      'outputs': None,
@@ -59,7 +59,7 @@ for t in test_copy_chain:
 
     assert args_in == result, 'copy_chain(): chains not equal -- '+t['reason']
 
-
+'''
 
 test_replace = [
     {'inputs' : [None, 1, 1],
