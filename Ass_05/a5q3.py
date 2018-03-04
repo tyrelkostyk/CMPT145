@@ -1,8 +1,9 @@
 ## Tyrel Kostyk, tck290, 11216033
 ## CMPT145-04, Lab Section 04
-## a5q2.py, due Saturday March 3rd, 2018, 10pm
+## a5q3.py, due Saturday March 3rd, 2018, 10pm
 
 import node as node
+import a5q1 as a5q1
 import a5q2 as a5q2
 
 def split_chain(node_chain):
@@ -26,25 +27,23 @@ def split_chain(node_chain):
     # special case: empty node chain
     if node_chain is None:
         return None, None
+    elif node_length == 1:
+        return None, node_chain
     else:
         # walk along the chain
-        walker = node_chain
-        counter = 1
-        while counter <= mid_point:
-            walker = node.get_next(walker)
+        last_half = node_chain
+        counter = 0
+        while counter < mid_point:
+            last_half = node.get_next(last_half)
             counter += 1
 
-            # if at end of first half, cut it off
-            if counter == mid_point:
-                tmp = walker
-                node.set_next(tmp, None)
-
-        # retrieve second half of chain
-        last_half = walker
+        # at end of first half, cut it off
+        tmp = node_chain
+        for i in range(mid_point-1):
+            tmp = node.get_next(tmp)
+        node.set_next(tmp, None)
 
     return node_chain, last_half
-
-
 
 
 def remove_chain(node_chain, val):

@@ -10,8 +10,15 @@ recent on top)
 ####################################################################################
 ####################################################################################
 
+#8
+commit da7734fa8a4dd11bbf38255e139d8fc75500f17d
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Mar 3 21:54:53 2018 -0600
+
+    Completed split_chain(); correctly splits chain on all test cases
+
 #7
-commit df6fc756c6c7ad1336ae62721a7a8ab4dda19aa5 (HEAD -> master, origin/master, origin/HEAD)
+commit df6fc756c6c7ad1336ae62721a7a8ab4dda19aa5
 Author: tyrelkostyk <tck290@mail.usask.ca>
 Date:   Sat Mar 3 21:10:44 2018 -0600
 

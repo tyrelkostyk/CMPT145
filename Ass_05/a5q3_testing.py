@@ -36,7 +36,7 @@ test_split_chain = [
      'reason' : 'node chain with six nodes'},
 ]
 
-'''
+
 for t in test_split_chain:
     args_in = t['inputs']
     expected = t['outputs']
@@ -46,9 +46,9 @@ for t in test_split_chain:
     str_args_in = a5q1.to_string(first)
     assert str_result == expected[1] and str_args_in == expected[0], \
         'split_chain(): got '\
-        +str_result+' and '+str_args_in+' -- ' +t['reason']
+        +str_args_in+' and '+str_result+' -- ' +t['reason']
 
-
+'''
 test_remove_chain = [
     {'inputs' : [None, 1],
      'outputs': "EMPTY",
