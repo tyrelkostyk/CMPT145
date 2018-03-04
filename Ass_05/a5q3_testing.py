@@ -48,7 +48,7 @@ for t in test_split_chain:
         'split_chain(): got '\
         +str_args_in+' and '+str_result+' -- ' +t['reason']
 
-'''
+
 test_remove_chain = [
     {'inputs' : [None, 1],
      'outputs': "EMPTY",
@@ -102,10 +102,10 @@ for t in test_remove_chain:
     result = a5q3.remove_chain(args_in[0], args_in[1])
 
     str_result = a5q1.to_string(result)
-    assert str_result == expected, 'remove_all_chain(): got "'\
+    assert str_result == expected, 'remove_chain(): got "'\
         +str_result+'" expected "'+expected+'" -- ' +t['reason']
 
-
+'''
 test_insert_at = [
 
     {'inputs' :  [None, 1, 0],

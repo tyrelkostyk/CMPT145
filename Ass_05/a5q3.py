@@ -30,7 +30,7 @@ def split_chain(node_chain):
     elif node_length == 1:
         return None, node_chain
     else:
-        # walk along the chain
+        # walk along the chain, cutting off previous nodes as you go
         last_half = node_chain
         counter = 0
         while counter < mid_point:
@@ -59,8 +59,26 @@ def remove_chain(node_chain, val):
     Return:
         :return: The resulting node chain with val removed
     """
+    # special case: empty node chain
+    if node_chain is None:
+        return node_chain
+    # special case: val appears in 1st node
+    elif node.get_data(node_chain) == val:
+        return node.get_next(node_chain)
+    else:
+        new_node = node_chain
+        walker = node_chain
+        counter = 0
+        while walker is not None:
+            walker = node.get_next(walker)
+            counter += 1
+            if (walker is not None) and (node.get_data(walker) == val):
+                walker = node.get_next(walker)
+                for i in range(counter-1):
+                    new_node = node.get_next(new_node)
+                node.set_next(new_node, walker)
 
-    return None
+    return node_chain
 
 
 
