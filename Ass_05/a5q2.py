@@ -64,4 +64,15 @@ def replace(node_chain, target, value):
     Return:
         :return: None
     """
-    return
+    if node_chain is None:
+        return None
+    else:
+        # walk along the chain
+        walker = node_chain
+        while walker is not None:
+            data = node.get_data(walker)
+            if data == target:
+                node.set_data(walker, value)
+            walker = node.get_next(walker)
+    
+    return None
