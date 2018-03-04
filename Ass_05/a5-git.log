@@ -10,6 +10,29 @@ recent on top)
 ####################################################################################
 ####################################################################################
 
+#11
+commit cc462b7c5cd71911195deb60fbd8c0af75428628 (HEAD -> master)
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sun Mar 4 01:37:03 2018 -0600
+
+    completed insert_at() function for a5q3.py; worked with every test case. Also
+    added sufficient comments
+
+#10
+commit c4f4cd042fc56b3964abc166c33198372a20d0b7
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sun Mar 4 00:39:17 2018 -0600
+
+    finished remove_chain() in a5q3, works with every test case
+
+#9
+commit bddce4ccb023e14f2c51fa722b73a33badee5592
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Mar 3 23:59:18 2018 -0600
+
+    Actually completed split_chain() in a5q3; turns out it wasn't working before,
+    I just messed up my test case script
+
 #8
 commit da7734fa8a4dd11bbf38255e139d8fc75500f17d
 Author: tyrelkostyk <tck290@mail.usask.ca>
