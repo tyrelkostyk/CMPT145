@@ -31,7 +31,7 @@ for t in test_count_chain:
     assert result == expected, 'count_chain(): got '\
         +str(result)+' expected '+str(expected)+' -- ' +t['reason']
 
-'''
+
 test_copy_chain = [
     {'inputs' : None,
      'outputs': None,
@@ -48,6 +48,10 @@ test_copy_chain = [
     {'inputs' : node.create(1, node.create('two', node.create(3))),
      'outputs': None,
      'reason' : 'node chain with three nodes'},
+
+    {'inputs' : node.create(1, node.create('two', node.create((3, node.create('four'))))),
+     'outputs': None,
+     'reason' : 'node chain with four nodes'},
 ]
 
 for t in test_copy_chain:
@@ -59,7 +63,7 @@ for t in test_copy_chain:
         'copy_chain(): original chain returned -- '+t['reason']
 
     assert args_in == result, 'copy_chain(): chains not equal -- '+t['reason']
-'''
+
 
 test_replace = [
     {'inputs' : [None, 1, 1],

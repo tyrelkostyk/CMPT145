@@ -43,14 +43,18 @@ def copy_chain(node_chain):
     else:
         # walk along the chain
         walker = node_chain
-        # initialize new node chain
+        # create new node chain
         new_chain = node.create(node.get_data(walker))
+        # initialize temporary node to iterate through each orignal node
+        tmp_node = new_chain
         while walker is not None:
             walker = node.get_next(walker)
             if walker is not None:
                 # initialize next node, & assign it as the next node in chain
                 next_node = node.create(node.get_data(walker))
-                node.set_next(new_chain, next_node)
+                node.set_next(tmp_node, next_node)
+                # reassign temp node, to further iterate through orignal chain
+                tmp_node = next_node
 
     return new_chain
 
