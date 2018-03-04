@@ -9,3 +9,33 @@ recent on top)
 
 ####################################################################################
 ####################################################################################
+
+commit 3aa26ab1cf12dcf131404d5a38be290cfc282154
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Mar 3 20:16:02 2018 -0600
+
+    Completed replace() in a5q2.py; working for all test cases
+
+commit 4ccf65eb44531c928b8fa904bd4cf210987fef1d
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Mar 3 20:01:08 2018 -0600
+
+    Almost finished copy_chain() in a5q2.py; working for up to 2-node chains, but not 3
+
+commit cd291826b622cbf63702ee2edae4d0bd6504c2d3
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Mar 3 18:59:55 2018 -0600
+
+    Finished 1st & final draft of count_chain() in a5q2.py; working
+
+commit 27e79143de9f56d1beaf3c5cbede2c6712652707
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Mar 3 18:49:48 2018 -0600
+
+    finished 1st & final revision of a5q1.py; fixed now
+
+commit d24848d1b646c28e5afa7fd05e9bfbdf20642a24
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Mar 3 18:48:59 2018 -0600
+
+    downloaded/initailized starter files

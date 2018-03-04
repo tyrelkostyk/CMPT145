@@ -14,16 +14,17 @@ def count_chain(node_chain):
         :return: The number of nodes in the node chain.
     """
     counter = 0
+    # special case: empty node chain
     if node_chain is None:
         return counter
     else:
+        # walk along the chain
         walker = node_chain
         while walker is not None:
             walker = node.get_next(walker)
             counter += 1
 
     return counter
-
 
 
 def copy_chain(node_chain):
@@ -35,15 +36,19 @@ def copy_chain(node_chain):
     Return:
         :return: A copy of node chain, with new nodes, but the same data.
     """
+    # special case: empty node chain
     if node_chain is None:
         new_chain = None
         return new_chain
     else:
+        # walk along the chain
         walker = node_chain
+        # initialize new node chain
         new_chain = node.create(node.get_data(walker))
         while walker is not None:
             walker = node.get_next(walker)
             if walker is not None:
+                # initialize next node, & assign it as the next node in chain
                 next_node = node.create(node.get_data(walker))
                 node.set_next(new_chain, next_node)
 
@@ -64,15 +69,17 @@ def replace(node_chain, target, value):
     Return:
         :return: None
     """
+    # special case: empty node chain
     if node_chain is None:
         return None
     else:
         # walk along the chain
         walker = node_chain
         while walker is not None:
+            # check if data == target, & replace w/ value if it does
             data = node.get_data(walker)
             if data == target:
                 node.set_data(walker, value)
             walker = node.get_next(walker)
-    
+
     return None

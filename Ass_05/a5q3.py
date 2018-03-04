@@ -1,8 +1,9 @@
-# CMPT 145: Assignment 5 Question 3
+## Tyrel Kostyk, tck290, 11216033
+## CMPT145-04, Lab Section 04
+## a5q2.py, due Saturday March 3rd, 2018, 10pm
 
 import node as node
 import a5q2 as a5q2
-
 
 def split_chain(node_chain):
     """
@@ -62,4 +63,3 @@ def insert_at(node_chain, value, index):
     """
 
     return None
-
