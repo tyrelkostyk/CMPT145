@@ -19,7 +19,30 @@ def split_chain(node_chain):
         :return: A tuple (nc1, nc2) where nc1 and nc2 are node-chains
          each containing about half of the nodes in node-chain
     """
-    return None, None
+    # calculate mid_point location
+    node_length = a5q2.count_chain(node_chain)
+    mid_point = node_length // 2
+
+    # special case: empty node chain
+    if node_chain is None:
+        return None, None
+    else:
+        # walk along the chain
+        walker = node_chain
+        counter = 1
+        while counter <= mid_point:
+            walker = node.get_next(walker)
+            counter += 1
+
+            # if at end of first half, cut it off
+            if counter == mid_point:
+                tmp = walker
+                node.set_next(tmp, None)
+
+        # retrieve second half of chain
+        last_half = walker
+
+    return node_chain, last_half
 
 
 
