@@ -1,8 +1,8 @@
-# CMPT 145: Assignment 5 Question 2
+## Tyrel Kostyk, tck290, 11216033
+## CMPT145-04, Lab Section 04
+## a5q2.py, due Saturday March 3rd, 2018, 10pm
 
 import node as node
-
-
 
 def count_chain(node_chain):
     """
@@ -13,7 +13,16 @@ def count_chain(node_chain):
     Return:
         :return: The number of nodes in the node chain.
     """
-    return None
+    counter = 0
+    if node_chain is None:
+        return counter
+    else:
+        walker = node_chain
+        while walker is not None:
+            walker = node.get_next(walker)
+            counter += 1
+
+    return counter
 
 
 
@@ -44,4 +53,3 @@ def replace(node_chain, target, value):
         :return: None
     """
     return
-
