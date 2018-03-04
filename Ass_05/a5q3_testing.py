@@ -105,7 +105,7 @@ for t in test_remove_chain:
     assert str_result == expected, 'remove_chain(): got "'\
         +str_result+'" expected "'+expected+'" -- ' +t['reason']
 
-'''
+
 test_insert_at = [
 
     {'inputs' :  [None, 1, 0],
@@ -150,6 +150,5 @@ for t in test_insert_at:
     str_result = a5q1.to_string(result)
     assert str_result == expected, 'insert_at(): got "'\
         +str_result+'" expected "'+expected+'" -- ' +t['reason']
-'''
 
 print('*** testing complete ***')

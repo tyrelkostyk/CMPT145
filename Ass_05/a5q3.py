@@ -29,6 +29,7 @@ def split_chain(node_chain):
         return None, None
     elif node_length == 1:
         return None, node_chain
+    
     else:
         # walk along the chain, cutting off previous nodes as you go
         last_half = node_chain
@@ -37,7 +38,7 @@ def split_chain(node_chain):
             last_half = node.get_next(last_half)
             counter += 1
 
-        # at end of first half, cut it off
+        # at end of first half, cut it off from future nodes
         tmp = node_chain
         for i in range(mid_point-1):
             tmp = node.get_next(tmp)
@@ -65,23 +66,23 @@ def remove_chain(node_chain, val):
     # special case: val appears in 1st node
     elif node.get_data(node_chain) == val:
         return node.get_next(node_chain)
+
     else:
-        new_node = node_chain
+        # walk through chain, checking for val in each node
         walker = node_chain
         counter = 0
         while walker is not None:
             walker = node.get_next(walker)
             counter += 1
+            # when val detected, combine all prev nodes with all nodes after
             if (walker is not None) and (node.get_data(walker) == val):
                 walker = node.get_next(walker)
+                tmp_node = node_chain
                 for i in range(counter-1):
-                    new_node = node.get_next(new_node)
-                node.set_next(new_node, walker)
+                    tmp_node = node.get_next(tmp_node)
+                node.set_next(tmp_node, walker)
 
     return node_chain
-
-
-
 
 
 def insert_at(node_chain, value, index):
@@ -101,5 +102,26 @@ def insert_at(node_chain, value, index):
     Return
         :return: the node-chain with the new value in it
     """
+    # special case: empty node chain
+    if node_chain is None:
+        return node.create(value)
+    # special case: index is at 0
+    elif index == 0:
+        return node.create(value, node_chain)
 
-    return None
+    else:
+        # walk through chain, cutting off prev nodes, until index is reached
+        walker = node_chain
+        counter = 0
+        while counter < index:
+            walker = node.get_next(walker)
+            counter += 1
+        # iterate through front of chain
+        tmp = node_chain
+        for i in range(counter-1):
+            tmp = node.get_next(tmp)
+        # create new node, combine with front & back parts of original chain
+        new_node = node.create(value, walker)
+        node.set_next(tmp, new_node)
+
+    return node_chain
