@@ -110,7 +110,8 @@ def value_is_in(alist, val):
     #     return node.get_data(alist) == val
     else:
         walker = alist
-        print('alist:', a5q1.to_string(alist))
+        # print('walker:', a5q1.to_string(walker))
+        print(walker)
         while walker is not None:
             if node.get_data(walker) == val:
                 return True
