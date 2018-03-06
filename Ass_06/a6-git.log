@@ -1,0 +1,42 @@
+## Tyrel Kostyk, tck290, 11216033
+## CMPT145-04, Lab Section 04
+## A6q0; a6-git.log, due Friday March 9th, 2018, 10pm
+
+### NOTE TO MARKER: I don't use PyCharm (I prefer Atom). I also use my own preferred
+method of version control using Git Bash (on GitHub). This is why my format may look
+slightly different than what you're expecting. PS; they're in descending order (most
+recent on top)
+
+####################################################################################
+####################################################################################
+
+commit fca92f8e0de0e9ceec0c7fb4b8387fd3c257c7d1 (HEAD -> master)
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Mar 6 11:50:08 2018 -0600
+
+    Fixed KeyError in value_is_in(), now passes all its tests successfully
+
+commit 984cd1765deeba70927e28ed92621331d12ef167
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Mar 6 09:58:19 2018 -0600
+
+    Started value_is_in(), completed first test. Experiencing KeyError on
+    node['data'] for some reason. Import a5q1.py for debugging
+
+commit ab4eec2f999717defa50f426fe22d266fc81da41
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Mar 6 09:56:36 2018 -0600
+
+    completed add_to_front and add_to_back functions in LList.py
+
+commit aaf620d0e352e404470be628637d6c3ed1bbfd04
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Mar 6 09:45:07 2018 -0600
+
+    completed is_empty() & size() functions for LList.py
+
+commit 4f1874978e3ef4d3311d4b861f477343d31d34c5 (origin/master, origin/HEAD)
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Mar 6 09:17:11 2018 -0600
+
+    initialized starter files for a6
