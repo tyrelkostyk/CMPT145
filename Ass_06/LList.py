@@ -255,12 +255,26 @@ def remove_from_back(alist):
     """
     if alist['size'] ==  0:
         return False, None
+    elif alist['size'] == 1:
+        value = node.get_data(alist['head'])
+        alist['head'] = None
+        alist['tail'] = None
+        return True, value
     else:
+        # retrieve data from tail of linked list
         prev_last_node = alist['tail']
         value = node.get_data(prev_last_node)
 
-        if alist['size'] == 1:
-             
+        # walk through linked list
+        walker = alist['head']
+        for i in range(alist['size']-2):
+            walker = node.get_next(walker)
+
+        # reassign linked list's tail
+        node.set_next(walker, None)
+        alist['tail'] = walker
+
+        return True, value
     return False, None
 
 

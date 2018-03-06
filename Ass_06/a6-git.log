@@ -10,6 +10,35 @@ recent on top)
 ####################################################################################
 ####################################################################################
 
+#16
+commit 1d7e7f02501e00f59155487829da5b2954ecd512 (HEAD -> master)
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Mar 6 11:48:26 2018 -0600
+
+    began remove_from_back()
+
+#15
+commit e327bafe304f8f3ceabe2a7a4413ab45d31dc494 (HEAD -> master)
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Mar 6 11:38:52 2018 -0600
+
+    finished remove_from_front(); passes all tests
+
+#14
+commit 86fae5d5fb1150762e5e006d976e787d8338692f
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Mar 6 12:32:15 2018 -0600
+
+    Began remove_from_front, handled special cases
+
+#13
+commit 7a2fb07e7c73423fcea5721f901485fda35c3b99
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Mar 6 12:30:52 2018 -0600
+
+    increased robustness for set_data_at_index (for indices outside range of linked
+    list)
+
 #12
 commit 2b3c7370513426beb250ddf6408d2401b42f09cb (HEAD -> master)
 Author: tyrelkostyk <tck290@mail.usask.ca>
