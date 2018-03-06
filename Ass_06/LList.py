@@ -91,7 +91,6 @@ def add_to_back(alist, val):
     return None
 
 
-# TODO: complete value_is_in(alist, val)   --- when done, delete this line
 def value_is_in(alist, val):
     """
     Purpose
@@ -106,16 +105,14 @@ def value_is_in(alist, val):
     """
     if alist['size'] == 0:
         return False
-    # elif alist['size'] == 1:
-    #     return node.get_data(alist) == val
     else:
-        walker = alist
-        # print('walker:', a5q1.to_string(walker))
-        print(walker)
+        walker = alist['head']
+        i = 0
         while walker is not None:
             if node.get_data(walker) == val:
                 return True
             walker = node.get_next(walker)
+            i += 1
     return False
 
 
