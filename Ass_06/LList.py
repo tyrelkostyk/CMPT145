@@ -228,6 +228,7 @@ def remove_from_front(alist):
     if alist['size'] == 0:
         return False, None
     else:
+        prev_first_node = alist['head']
         
     return False, None
 
