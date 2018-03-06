@@ -229,7 +229,15 @@ def remove_from_front(alist):
         return False, None
     else:
         prev_first_node = alist['head']
-        
+        value = node.get_data(prev_first_node)
+        alist['head'] = node.get_next(prev_first_node)
+
+        if alist['size'] == 1:
+            alist['tail'] = None
+
+        alist['size'] -= 1
+        return True, value
+
     return False, None
 
 # TODO: complete remove_from_back(alist)   --- when done, delete this line
