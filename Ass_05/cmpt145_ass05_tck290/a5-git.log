@@ -1,0 +1,90 @@
+## Tyrel Kostyk, tck290, 11216033
+## CMPT145-04, Lab Section 04
+## a5-git.log, due Saturday March 3rd, 2018, 10pm
+
+### NOTE TO MARKER: I don't use PyCharm (I prefer Atom). I also use my own preferred
+method of version control using Git Bash (on GitHub). This is why my format may look
+slightly different than what you're expecting. PS; they're in descending order (most
+recent on top)
+
+####################################################################################
+####################################################################################
+
+#11
+commit cc462b7c5cd71911195deb60fbd8c0af75428628 (HEAD -> master)
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sun Mar 4 01:37:03 2018 -0600
+
+    completed insert_at() function for a5q3.py; worked with every test case. Also
+    added sufficient comments
+
+#10
+commit c4f4cd042fc56b3964abc166c33198372a20d0b7
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sun Mar 4 00:39:17 2018 -0600
+
+    finished remove_chain() in a5q3, works with every test case
+
+#9
+commit bddce4ccb023e14f2c51fa722b73a33badee5592
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Mar 3 23:59:18 2018 -0600
+
+    Actually completed split_chain() in a5q3; turns out it wasn't working before,
+    I just messed up my test case script
+
+#8
+commit da7734fa8a4dd11bbf38255e139d8fc75500f17d
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Mar 3 21:54:53 2018 -0600
+
+    Completed split_chain(); correctly splits chain on all test cases
+
+#7
+commit df6fc756c6c7ad1336ae62721a7a8ab4dda19aa5
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Mar 3 21:10:44 2018 -0600
+
+    Completed copy_chain(), now works perfectly, tested with up to 4-node chains
+
+#6
+commit b8d7345900bc921e4ecc66323b4525c1b3501422
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Mar 3 19:42:31 2018 -0600
+
+    Cleaned up a5q2.py, improved comments & style
+#5
+commit 3aa26ab1cf12dcf131404d5a38be290cfc282154
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Mar 3 20:16:02 2018 -0600
+
+    Completed replace() in a5q2.py; working for all test cases
+
+#4
+commit 4ccf65eb44531c928b8fa904bd4cf210987fef1d
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Mar 3 20:01:08 2018 -0600
+
+    Almost finished copy_chain() in a5q2.py; working for up to 2-node chains, but
+    not 3
+
+#3
+commit cd291826b622cbf63702ee2edae4d0bd6504c2d3
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Mar 3 18:59:55 2018 -0600
+
+    Finished 1st & final draft of count_chain() in a5q2.py; working
+
+#2
+commit 27e79143de9f56d1beaf3c5cbede2c6712652707
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Mar 3 18:49:48 2018 -0600
+
+    Finished 1st & final revision of a5q1.py; fixed now
+
+#1
+commit d24848d1b646c28e5afa7fd05e9bfbdf20642a24
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Mar 3 18:48:59 2018 -0600
+
+    Downloaded/initailized starter files
