@@ -19,7 +19,6 @@ def create():
     return llist
 
 
-# TODO: complete is_empty(alist) --- when done, delete this line
 def is_empty(alist):
     """
     Purpose
@@ -29,10 +28,9 @@ def is_empty(alist):
     Return:
         :return True if the list has no data, or False otherwise
     """
-    return True
+    return alist['size'] == 0
 
 
-# TODO: complete size(alist)  --- when done, delete this line
 def size(alist):
     """
     Purpose
@@ -42,10 +40,9 @@ def size(alist):
     Return:
         :return The number of data values in the list
     """
-    return 0
+    return alist['size']
 
 
-# TODO: complete add_to_front(alist, val)  --- when done, delete this line
 def add_to_front(alist, val):
     """
     Purpose
@@ -60,10 +57,15 @@ def add_to_front(alist, val):
     Return:
         :return None
     """
-    pass
+    new_first_node = node.create(val, alist['head'])
+    alist['head'] = new_first_node
+    if alist['size'] == 0:
+        alist['tail'] = new_first_node
+
+    alist['size'] += 1
+    return None
 
 
-# TODO: complete add_to_back(alist, val)  --- when done, delete this line
 def add_to_back(alist, val):
     """
     Purpose
@@ -77,7 +79,16 @@ def add_to_back(alist, val):
     Return:
         :return None
     """
-    pass
+    new_last_node = node.create(val)
+
+    if alist['size'] == 0:
+        alist['head'] = new_last_node
+    else:
+        node.set_next(alist['tail'], new_last_node)
+
+    alist['tail'] = new_last_node
+    alist['size'] += 1
+    return None
 
 
 # TODO: complete value_is_in(alist, val)   --- when done, delete this line
@@ -93,6 +104,16 @@ def value_is_in(alist, val):
     Return:
         :return True if the value is in the list, False otherwise
     """
+    if alist['size'] == 0:
+        return False
+    # elif alist['size'] == 1:
+    #     return node.get_data(alist) == val
+    else:
+        walker = alist
+        while walker is not None:
+            if node.get_data(walker) == val:
+                return True
+            walker = node.get_next(walker)
     return False
 
 
