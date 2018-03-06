@@ -210,7 +210,6 @@ def set_data_at_index(alist, idx, val):
     return False
 
 
-# TODO: complete remove_from_front(alist)   --- when done, delete this line
 def remove_from_front(alist):
     """
     Purpose
@@ -254,6 +253,14 @@ def remove_from_back(alist):
         :return The tuple (True, value) if alist is not empty
         :return The tuple (False, None) if alist is empty
     """
+    if alist['size'] ==  0:
+        return False, None
+    else:
+        prev_last_node = alist['tail']
+        value = node.get_data(prev_last_node)
+
+        if alist['size'] == 1:
+             
     return False, None
 
 
