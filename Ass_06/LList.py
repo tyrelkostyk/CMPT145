@@ -3,7 +3,7 @@
 ## A5q1; LList.py, due Friday March 9th, 2018, 10pm
 
 import node as node
-
+import a5q1 as a5q1
 
 def create():
     """
@@ -110,6 +110,7 @@ def value_is_in(alist, val):
     #     return node.get_data(alist) == val
     else:
         walker = alist
+        print('alist:', a5q1.to_string(alist))
         while walker is not None:
             if node.get_data(walker) == val:
                 return True
