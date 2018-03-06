@@ -116,7 +116,6 @@ def value_is_in(alist, val):
     return False
 
 
-# TODO: complete get_index_of_value(alist, val)   --- when done, delete this line
 def get_index_of_value(alist, val):
     """
     Purpose
@@ -151,13 +150,27 @@ def retrieve_data_at_index(alist, idx):
         Return the value stored in alist at the index idx
     Preconditions:
         :param alist: a list created by create()
-        :param idx:   a non-negative integer
+        :param idx:   a non-negative integer, between 0 & n-1 (n = len of alist)
     Post-conditions:
         none
     Return:
         :return (True, val) if val is stored at index idx and idx is valid
         :return (False, None) if the idx is not valid for the list
     """
+    if alist['size'] == 0:
+        return False, None
+    else:
+        walker = alist['head']
+        counter = 0
+        while (counter < idx) and (walker is not None):
+            walker = node.get_next(walker)
+            counter += 1
+        if walker is None:
+            return False, None
+        else:
+            val = node.get_data(walker)
+            return True, val
+
     return False, None
 
 
