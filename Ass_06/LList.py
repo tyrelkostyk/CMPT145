@@ -164,17 +164,16 @@ def retrieve_data_at_index(alist, idx):
     # special case: empty linked-list
     if alist['size'] == 0:
         return False, None
+    elif idx >= alist['size']:
+        return False, None
     else:
         walker = alist['head']
         counter = 0
         while (counter < idx) and (walker is not None):
             walker = node.get_next(walker)
             counter += 1
-        if walker is None:
-            return False, None
-        else:
-            val = node.get_data(walker)
-            return True, val
+        val = node.get_data(walker)
+        return True, val
 
     return False, None
 
@@ -202,8 +201,10 @@ def set_data_at_index(alist, idx, val):
         while walker is not None:
             if counter == idx:
                 node.set_data(walker, val)
+                return True
             walker = node.get_next(walker)
             counter += 1
+
     return False
 
 
