@@ -10,6 +10,27 @@ recent on top)
 ####################################################################################
 ####################################################################################
 
+#12
+commit 2b3c7370513426beb250ddf6408d2401b42f09cb (HEAD -> master)
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Mar 6 12:24:34 2018 -0600
+
+    finished set_data_at_index; passes all tests
+
+#11
+commit 9e2fc7e89d749d0f70efd43135597a33dd5a4aa4
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Mar 6 12:23:04 2018 -0600
+
+    fixed potetial for error in retrieve_data_at_index (still passes all tests)
+
+#10
+commit 0a2133f949c2f31e1336f8f9195646148303b921
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Mar 6 12:17:54 2018 -0600
+
+    began set_data_at_index; special cases handled
+
 #9
 commit 9cce5a32b1d74ac5c958f72bb3725c99f92e14c8 (HEAD -> master)
 Author: tyrelkostyk <tck290@mail.usask.ca>

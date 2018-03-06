@@ -178,7 +178,6 @@ def retrieve_data_at_index(alist, idx):
     return False, None
 
 
-# TODO: complete set_data_at_index(alist, idx, val)   --- when done, delete this line
 def set_data_at_index(alist, idx, val):
     """
     Purpose
@@ -194,6 +193,9 @@ def set_data_at_index(alist, idx, val):
     """
     # special case: empty linked-list
     if alist['size'] == 0:
+        return False
+    # special case: index out of range
+    elif idx >= alist['size']:
         return False
     else:
         walker = alist['head']
@@ -222,6 +224,11 @@ def remove_from_front(alist):
         :return The tuple (True, value) if alist is not empty
         :return The tuple (False, None) if alist is empty
     """
+    # special case: empty linked list
+    if alist['size'] == 0:
+        return False, None
+    else:
+        
     return False, None
 
 # TODO: complete remove_from_back(alist)   --- when done, delete this line
