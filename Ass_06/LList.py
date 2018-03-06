@@ -226,13 +226,17 @@ def remove_from_front(alist):
     # special case: empty linked list
     if alist['size'] == 0:
         return False, None
+    elif alist['size'] == 1:
+        value = node.get_data(alist['head'])
+        alist['head'] = None
+        alist['tail'] = None
+
+        alist['size'] -= 1
+        return True, value
     else:
         prev_first_node = alist['head']
         value = node.get_data(prev_first_node)
         alist['head'] = node.get_next(prev_first_node)
-
-        if alist['size'] == 1:
-            alist['tail'] = None
 
         alist['size'] -= 1
         return True, value
@@ -259,6 +263,8 @@ def remove_from_back(alist):
         value = node.get_data(alist['head'])
         alist['head'] = None
         alist['tail'] = None
+
+        alist['size'] -= 1
         return True, value
     else:
         # retrieve data from tail of linked list
@@ -274,6 +280,7 @@ def remove_from_back(alist):
         node.set_next(walker, None)
         alist['tail'] = walker
 
+        alist['size'] -= 1
         return True, value
     return False, None
 
