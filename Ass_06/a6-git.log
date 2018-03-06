@@ -10,6 +10,27 @@ recent on top)
 ####################################################################################
 ####################################################################################
 
+#19
+commit 8691ba98e0fb62119ffc2fbcd9a1614cef76df6a (HEAD -> master)
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Mar 6 15:47:51 2018 -0600
+
+    began insert_values_at_index, handled special cases
+
+#18
+commit c7f3f64d3bcb745409f696e1103aeb7188a30d18
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Mar 6 15:41:21 2018 -0600
+
+    Finsihed remove_from_back(); passed all tests for it. Implemented cleaner solution for it & remove_from_front()
+
+#17
+commit 77fde7919806c9ec6d77fc05dd99dbc70226e85e
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Mar 6 15:35:49 2018 -0600
+
+    almost finished remove_from_back()
+
 #16
 commit 1d7e7f02501e00f59155487829da5b2954ecd512 (HEAD -> master)
 Author: tyrelkostyk <tck290@mail.usask.ca>

@@ -302,6 +302,21 @@ def insert_value_at_index(alist, val, idx):
         :return If the index is valid, insert_value_at_index returns True.
         :return If the index is not valid, insert_value_at_index returns False.
     """
+    # special case: index outside of range of linked list
+    if idx > alist['size']:
+        return False
+    # special case: empty linked list
+    elif alist['size'] == 0:
+        alist['head'] = node.create(val)
+        alist['tail'] = alist['head']
+        return True
+    else:
+        new_node = node.create(val)
+
+        # walk through front half of linked list (up to index)
+
+        # walk past index to connect new node to last half of linked list
+
     return False
 
 
@@ -332,4 +347,10 @@ def delete_item_at_index(alist, idx):
         return True
     else:
 
+        # walk through front half of linked list (up to index)
+
+        # walk past index to connect new node to last half of linked list
+
+
+        return True
     return False
