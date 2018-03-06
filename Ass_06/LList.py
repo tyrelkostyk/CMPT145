@@ -243,7 +243,7 @@ def remove_from_front(alist):
 
     return False, None
 
-# TODO: complete remove_from_back(alist)   --- when done, delete this line
+
 def remove_from_back(alist):
     """
     Purpose
@@ -304,6 +304,7 @@ def insert_value_at_index(alist, val, idx):
     """
     return False
 
+
 # TODO: complete delete_item_at_index(alist, idx)   --- when done, delete this line
 def delete_item_at_index(alist, idx):
     """
@@ -318,4 +319,17 @@ def delete_item_at_index(alist, idx):
     Return:
         :return True if index was valid, False otherwise
     """
+    # special case: empty linked list
+    if alist['size'] == 0:
+        return False
+    # special case: index outside of range of linked list
+    elif idx >= alist['size']:
+        return False
+    # special case: single item in linked list
+    elif alist['size'] == 1:
+        alist['head'] = None
+        alist['tail'] = None
+        return True
+    else:
+
     return False
