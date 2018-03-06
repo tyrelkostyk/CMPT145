@@ -10,12 +10,42 @@ recent on top)
 ####################################################################################
 ####################################################################################
 
-commit fca92f8e0de0e9ceec0c7fb4b8387fd3c257c7d1 (HEAD -> master)
+#9
+commit 9cce5a32b1d74ac5c958f72bb3725c99f92e14c8 (HEAD -> master)
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Mar 6 12:13:08 2018 -0600
+
+    completed retrieve_data_at_index; passes all related tests
+
+#8
+commit 11964b2d5e6bca685fe5df6efb87a5fd2380ab15
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Mar 6 12:07:24 2018 -0600
+
+    completed set-up of retrieve_data_at_index()
+
+#7
+commit a025d89e981f856464137c00b22d38452ae4df92
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Mar 6 11:57:46 2018 -0600
+
+    Finished get_index_of_value(), works for all related test cases
+
+#6
+commit 43ca82aa723ace77105116758fea752f253e3bf1
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Mar 6 11:53:44 2018 -0600
+
+    Started get_index_of_value(); set up function
+
+#5
+commit fca92f8e0de0e9ceec0c7fb4b8387fd3c257c7d1
 Author: tyrelkostyk <tck290@mail.usask.ca>
 Date:   Tue Mar 6 11:50:08 2018 -0600
 
     Fixed KeyError in value_is_in(), now passes all its tests successfully
 
+#4
 commit 984cd1765deeba70927e28ed92621331d12ef167
 Author: tyrelkostyk <tck290@mail.usask.ca>
 Date:   Tue Mar 6 09:58:19 2018 -0600
@@ -23,18 +53,21 @@ Date:   Tue Mar 6 09:58:19 2018 -0600
     Started value_is_in(), completed first test. Experiencing KeyError on
     node['data'] for some reason. Import a5q1.py for debugging
 
+#3
 commit ab4eec2f999717defa50f426fe22d266fc81da41
 Author: tyrelkostyk <tck290@mail.usask.ca>
 Date:   Tue Mar 6 09:56:36 2018 -0600
 
     completed add_to_front and add_to_back functions in LList.py
 
+#2
 commit aaf620d0e352e404470be628637d6c3ed1bbfd04
 Author: tyrelkostyk <tck290@mail.usask.ca>
 Date:   Tue Mar 6 09:45:07 2018 -0600
 
     completed is_empty() & size() functions for LList.py
 
+#1
 commit 4f1874978e3ef4d3311d4b861f477343d31d34c5 (origin/master, origin/HEAD)
 Author: tyrelkostyk <tck290@mail.usask.ca>
 Date:   Tue Mar 6 09:17:11 2018 -0600

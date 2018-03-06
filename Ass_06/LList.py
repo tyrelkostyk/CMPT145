@@ -193,6 +193,17 @@ def set_data_at_index(alist, idx, val):
     Return:
         :return True if the index was valid, False otherwise
     """
+    # special case: empty linked-list
+    if alist['size'] == 0:
+        return False
+    else:
+        walker = alist['head']
+        counter = 0
+        while walker is not None:
+            if counter == idx:
+                node.set_data(walker, val)
+            walker = node.get_next(walker)
+            counter += 1
     return False
 
 
