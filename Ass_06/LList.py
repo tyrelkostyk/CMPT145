@@ -130,6 +130,17 @@ def get_index_of_value(alist, val):
         :return the tuple (True, idx) if the val appears in alist
         :return the tuple (False, None) if the vale does not appear in alist
     """
+    if alist['size'] == 0:
+        return False, None
+    else:
+        walker = alist['head']
+        counter = 0
+        while walker is not None:
+            if node.get_data(walker) == val:
+                return True, counter
+            walker = node.get_next(walker)
+            counter += 1
+
     return False, None
 
 
