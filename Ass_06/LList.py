@@ -59,6 +59,8 @@ def add_to_front(alist, val):
     """
     new_first_node = node.create(val, alist['head'])
     alist['head'] = new_first_node
+
+    # special case: empty linked-list
     if alist['size'] == 0:
         alist['tail'] = new_first_node
 
@@ -81,6 +83,7 @@ def add_to_back(alist, val):
     """
     new_last_node = node.create(val)
 
+    # special case: empty linked-list
     if alist['size'] == 0:
         alist['head'] = new_last_node
     else:
@@ -103,6 +106,7 @@ def value_is_in(alist, val):
     Return:
         :return True if the value is in the list, False otherwise
     """
+    # special case: empty linked-list
     if alist['size'] == 0:
         return False
     else:
@@ -129,6 +133,7 @@ def get_index_of_value(alist, val):
         :return the tuple (True, idx) if the val appears in alist
         :return the tuple (False, None) if the vale does not appear in alist
     """
+    # special case: empty linked-list
     if alist['size'] == 0:
         return False, None
     else:
@@ -143,7 +148,6 @@ def get_index_of_value(alist, val):
     return False, None
 
 
-# TODO: complete  retrieve_data_at_index(alist, idx)   --- when done, delete this line
 def retrieve_data_at_index(alist, idx):
     """
     Purpose
@@ -157,6 +161,7 @@ def retrieve_data_at_index(alist, idx):
         :return (True, val) if val is stored at index idx and idx is valid
         :return (False, None) if the idx is not valid for the list
     """
+    # special case: empty linked-list
     if alist['size'] == 0:
         return False, None
     else:
