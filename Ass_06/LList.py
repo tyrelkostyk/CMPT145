@@ -349,12 +349,10 @@ def delete_item_at_index(alist, idx):
     # special case: index at front of list
     elif idx == 0:
         remove_from_front(alist)
-        alist['size'] -= 1
         return True
     # special case: index at back of list
     elif idx == alist['size']-1:
         remove_from_back(alist)
-        alist['size'] -= 1
         return True
     else:
         # walk through front half of linked list (up to index)
