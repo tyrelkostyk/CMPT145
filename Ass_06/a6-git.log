@@ -10,6 +10,23 @@ recent on top)
 ####################################################################################
 ####################################################################################
 
+#22
+commit f67e7f0b38ab4fedcbdb2fa6a161187344a6f14e (HEAD -> master)
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Fri Mar 9 03:21:29 2018 -0600
+
+    fixed error where I was changing alist['size'] in delete_item_at_index,
+    forgetting that those functions handle that on their own. Remove at index is
+    now complete, passes all of its tests
+
+#21
+commit a0b844da421419153088505443e97649ccecb09a
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Fri Mar 9 03:18:30 2018 -0600
+
+    Further dev of delete_item_a_index, added more support for special cases
+    (using remove_from_front, back, etc)
+
 #20
 commit 90525d536b7ebd46033dfb19462556ea30a94cec (HEAD -> master)
 Author: tyrelkostyk <tck290@mail.usask.ca>

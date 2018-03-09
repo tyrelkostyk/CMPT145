@@ -303,24 +303,47 @@ def insert_value_at_index(alist, val, idx):
         :return If the index is not valid, insert_value_at_index returns False.
     """
     # special case: index outside of range of linked list
-    if idx > alist['size']:
+    if (idx > alist['size']) or (idx < 0):
         return False
     # special case: empty linked list
     elif alist['size'] == 0:
         alist['head'] = node.create(val)
         alist['tail'] = alist['head']
         return True
+    # special case: index at front of list
+    elif idx == 0:
+        add_to_front(alist, val)
+        return True
+    # special case: index at back of list
+    elif idx == alist['size']:
+        add_to_back(alist, val)
+        return True
     else:
         new_node = node.create(val)
 
         # walk through front half of linked list (up to index)
+        before_new_node = alist['head']
+        counter = 0
+        while counter < idx-1:
+            before_new_node = node.get_next(before_new_node)
+            counter += 1
 
         # walk past index to connect new node to last half of linked list
+        after_new_node = alist['head']
+        counter = 0
+        while counter < idx:
+            after_new_node = node.get_next(after_new_node)
+            counter += 1
 
+        # connect first half to new node, then new node to last half
+        node.set_next(before_new_node, new_node)
+        node.set_next(new_node, after_new_node)
+
+        alist['size'] += 1
+        return True
     return False
 
 
-# TODO: complete delete_item_at_index(alist, idx)   --- when done, delete this line
 def delete_item_at_index(alist, idx):
     """
     Purpose
@@ -362,7 +385,7 @@ def delete_item_at_index(alist, idx):
             before_del_node = node.get_next(before_del_node)
             counter += 1
 
-        # walk past index to connect new node to last half of linked list
+        # walk just past index
         after_del_node = alist['head']
         counter = 0
         while counter <= idx:
