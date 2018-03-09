@@ -10,6 +10,29 @@ recent on top)
 ####################################################################################
 ####################################################################################
 
+#25
+commit ea08b4e2d3d7e9dd4f2cff3d32249dfc4d0e9a22 (HEAD -> master)
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Fri Mar 9 03:47:50 2018 -0600
+
+    Script cleaned up, made some functions more clean/effective, still at 218/218
+    tests passed :)
+
+#24
+commit be1851a19c45933288f15265d272beab07b67f7b
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Fri Mar 9 03:39:03 2018 -0600
+
+    Script now workin perfectly; 218 of 218 tests passed. Now all that's left is
+    a bit of cleanup
+
+#23
+commit 84ce8dc2ab2b5e713bfa499b6676c6b33c7843db
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Fri Mar 9 03:35:55 2018 -0600
+
+    mostly done insert_value_at_index, few small bugs to fix & clean up
+
 #22
 commit f67e7f0b38ab4fedcbdb2fa6a161187344a6f14e (HEAD -> master)
 Author: tyrelkostyk <tck290@mail.usask.ca>
