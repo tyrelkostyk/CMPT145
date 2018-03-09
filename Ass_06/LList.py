@@ -338,19 +338,46 @@ def delete_item_at_index(alist, idx):
     if alist['size'] == 0:
         return False
     # special case: index outside of range of linked list
-    elif idx >= alist['size']:
+    elif (idx >= alist['size']) or (idx < 0):
         return False
     # special case: single item in linked list
     elif alist['size'] == 1:
         alist['head'] = None
         alist['tail'] = None
+        alist['size'] -= 1
+        return True
+    # special case: index at front of list
+    elif idx == 0:
+        remove_from_front(alist)
+        alist['size'] -= 1
+        return True
+    # special case: index at back of list
+    elif idx == alist['size']-1:
+        remove_from_back(alist)
+        alist['size'] -= 1
         return True
     else:
-
         # walk through front half of linked list (up to index)
+        before_del_node = alist['head']
+        counter = 0
+        while counter < idx-1:
+            before_del_node = node.get_next(before_del_node)
+            counter += 1
 
         # walk past index to connect new node to last half of linked list
+        after_del_node = alist['head']
+        counter = 0
+        while counter <= idx:
+            if counter == idx:
+                del_node = after_del_node
+            after_del_node = node.get_next(after_del_node)
+            counter += 1
 
+        # disconnect deleted node
+        node.set_next(del_node, None)
+        # connect the two nodes across deleted node
+        node.set_next(before_del_node, after_del_node)
 
+        alist['size'] -= 1
         return True
     return False

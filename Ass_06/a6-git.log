@@ -10,6 +10,13 @@ recent on top)
 ####################################################################################
 ####################################################################################
 
+#20
+commit 90525d536b7ebd46033dfb19462556ea30a94cec (HEAD -> master)
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Tue Mar 6 16:00:57 2018 -0600
+
+    got further on insert_value_at_index, began delete_item_at_index
+
 #19
 commit 8691ba98e0fb62119ffc2fbcd9a1614cef76df6a (HEAD -> master)
 Author: tyrelkostyk <tck290@mail.usask.ca>

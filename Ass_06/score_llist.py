@@ -84,7 +84,7 @@ test_counter = createCounter('Linked List ADT:')
 #   -set limit to 10 errors as you are working; keeps output focussed
 #   -set limit to 0 (default, meaning "attempt all tests")
 #    when you're close to done
-set_limit(test_counter, 10)
+# set_limit(test_counter, 10)
 
 ###############################################################################################
 reason = 'create() unit test'
