@@ -106,10 +106,11 @@ def value_is_in(alist, val):
     Return:
         :return True if the value is in the list, False otherwise
     """
-    # special case: empty linked-list
+    # special case: empty linked list
     if alist['size'] == 0:
         return False
     else:
+        # walk through linked list
         walker = alist['head']
         i = 0
         while walker is not None:
@@ -164,6 +165,7 @@ def retrieve_data_at_index(alist, idx):
     # special case: empty linked-list
     if alist['size'] == 0:
         return False, None
+    # special case: invalid index
     elif idx >= alist['size']:
         return False, None
     else:
@@ -226,17 +228,15 @@ def remove_from_front(alist):
     # special case: empty linked list
     if alist['size'] == 0:
         return False, None
-    elif alist['size'] == 1:
-        value = node.get_data(alist['head'])
-        alist['head'] = None
-        alist['tail'] = None
-
-        alist['size'] -= 1
-        return True, value
     else:
+        # retrieve value, then simply reassign alist['head']
         prev_first_node = alist['head']
         value = node.get_data(prev_first_node)
         alist['head'] = node.get_next(prev_first_node)
+
+        # special case: single item in linked list; reassign alist['tail']
+        if alist['size'] == 1:
+            alist['tail'] = None
 
         alist['size'] -= 1
         return True, value
@@ -271,7 +271,7 @@ def remove_from_back(alist):
         prev_last_node = alist['tail']
         value = node.get_data(prev_last_node)
 
-        # walk through linked list
+        # walk through linked list, until right before tail
         walker = alist['head']
         for i in range(alist['size']-2):
             walker = node.get_next(walker)
@@ -285,7 +285,6 @@ def remove_from_back(alist):
     return False, None
 
 
-# TODO: complete insert_value_at_index(alist, val, idx)   --- when done, delete this line
 def insert_value_at_index(alist, val, idx):
     """
     Purpose
@@ -358,12 +357,6 @@ def delete_item_at_index(alist, idx):
     # special case: index outside of range of linked list
     elif (idx >= alist['size']) or (idx < 0):
         return False
-    # special case: single item in linked list
-    elif alist['size'] == 1:
-        alist['head'] = None
-        alist['tail'] = None
-        alist['size'] -= 1
-        return True
     # special case: index at front of list
     elif idx == 0:
         remove_from_front(alist)
