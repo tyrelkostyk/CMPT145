@@ -305,13 +305,8 @@ def insert_value_at_index(alist, val, idx):
     # special case: index outside of range of linked list
     if (idx > alist['size']) or (idx < 0):
         return False
-    # special case: empty linked list
-    elif alist['size'] == 0:
-        alist['head'] = node.create(val)
-        alist['tail'] = alist['head']
-        return True
-    # special case: index at front of list
-    elif idx == 0:
+    # special case: empty linked list, or index at front
+    elif (alist['size'] == 0) or (idx == 0):
         add_to_front(alist, val)
         return True
     # special case: index at back of list
