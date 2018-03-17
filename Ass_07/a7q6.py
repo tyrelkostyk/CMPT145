@@ -37,12 +37,16 @@ def reverse(chain):
     '''
     # base case
     if chain == None:
-        return chain
+        return None
+    # elif node.get_next(chain) ==  None:
+        # return(chain)
     else:
         # recursive call
-        node.set_data(node.get_data( reverse(node.get_next(chain)) ))
-
+        # node.set_next( node.get_next(chain), reverse(node.get_next(chain)) )
+        # node.set_next( reverse(node.get_next(chain)), chain )
         return chain
+# :(
+
 
 # c)
 def copy(chain):
@@ -52,15 +56,9 @@ def copy(chain):
     chain - node, possibly empty
     :returns: new (identical but seperate) chain
     '''
-    # special case: empty node
+    # base case
     if chain == None:
         return None
-    # base case
-    # elif node.get_next(chain) == None:
-    #     return node.create(node.get_data(chain))
     else:
-        # new_chain = copy(node.get_next(chain))
-        # node.set_data(new_chain, node.get_data(chain))
-        # node.set_next(new_chain, node.get_next(chain))
-
+        # recursive case; create new node with identical values for each orignal node
         return node.create(node.get_data(chain), next=copy(node.get_next(chain)) )

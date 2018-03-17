@@ -50,50 +50,30 @@ for t in test_subst:
 
     assert result == expected, 'subst(): expected '+str(expected)+', got ' +result+ ' -- '+t['reason']
 
-'''
+
 test_reverse = [
     {'inputs' : None,
      'outputs': 'EMPTY',
      'reason' : 'Empty node chain'},
 
-    # {'inputs' : [node.create(1), 1, 5],
-    #  'outputs': '[ 5 | / ]',
-    #  'reason' : 'node chain with one node, target in chain'},
-    #
-    # {'inputs' : [node.create(1), 3, 5],
-    #  'outputs': '[ 1 | / ]',
-    #  'reason' : 'node chain with one node, target not in chain'},
-    #
-    # {'inputs' : [node.create(1, node.create('two', node.create(3))), 1, 'one'],
-    #  'outputs': "[ one | *-]-->[ two | *-]-->[ 3 | / ]",
-    #  'reason' : 'node chain with three nodes, target is in first node'},
-    #
-    # {'inputs' : [node.create(1, node.create(2, node.create(3))), 3, 'three'],
-    #  'outputs': "[ 1 | *-]-->[ 2 | *-]-->[ three | / ]",
-    #  'reason' : 'node chain with three nodes, target is in last node'},
-    #
-    # {'inputs' : [node.create('one', node.create('two', node.create(3))), 7, 'seven'],
-    #  'outputs': "[ one | *-]-->[ two | *-]-->[ 3 | / ]",
-    #  'reason' : 'node chain with three nodes, target is not in node'},
-    #
-    # {'inputs' : [node.create('eight', node.create('two', node.create('three', node.create(5, node.create('six'))))), 5, 'five'],
-    #  'outputs': "[ eight | *-]-->[ two | *-]-->[ three | *-]-->[ five | *-]-->[ six | / ]",
-    #  'reason' : 'node chain with five nodes, target is in chain'},
-    #
-    # {'inputs' : [node.create('hello', node.create('bye', node.create('hello', node.create('hello')))), 'hello', 'hi'],
-    #  'outputs': "[ hi | *-]-->[ bye | *-]-->[ hi | *-]-->[ hi | / ]",
-    #  'reason' : 'node chain with four nodes, target is in three nodes'},
+    {'inputs' : node.create(7),
+     'outputs': '[ 7 | / ]',
+     'reason' : 'node chain with one node'},
+
+    {'inputs' : node.create(1, node.create('two', node.create(11))),
+     'outputs': "[ 11 | *-]-->[ two | *-]-->[ 1 | / ]",
+     'reason' : 'node chain with three nodes'},
 ]
 
 
-for t in test_subst:
+for t in test_reverse:
     args_in = t['inputs']
     expected = t['outputs']
 
     result = a5q1.to_string( a7q6.reverse(args_in) )
 
     assert result == expected, 'reverse(): expected '+str(expected)+', got ' +result+ ' -- '+t['reason']
-'''
+
 
 test_copy = [
     {'inputs' : None,
