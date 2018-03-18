@@ -7,6 +7,10 @@ import node as node
 
 # Utilizing to_string() function from a5q1
 
+## NOTE: I wasn't able to successfully implpement reverse() in a7q6, however
+## I still included the proper test cases for it (see below)
+
+# a)
 test_subst = [
     {'inputs' : [None, 5, 10],
      'outputs': 'EMPTY',
@@ -47,10 +51,10 @@ for t in test_subst:
     expected = t['outputs']
 
     result = a5q1.to_string( a7q6.subst(args_in[0], args_in[1], args_in[2]) )
-
     assert result == expected, 'subst(): expected '+str(expected)+', got ' +result+ ' -- '+t['reason']
 
 
+# b)
 test_reverse = [
     {'inputs' : None,
      'outputs': 'EMPTY',
@@ -71,10 +75,10 @@ for t in test_reverse:
     expected = t['outputs']
 
     result = a5q1.to_string( a7q6.reverse(args_in) )
-
     assert result == expected, 'reverse(): expected '+str(expected)+', got ' +result+ ' -- '+t['reason']
 
 
+# c)
 test_copy = [
     {'inputs' : None,
      'outputs': 'EMPTY',
@@ -90,7 +94,7 @@ test_copy = [
 
     {'inputs' : node.create('eight', node.create('two', node.create('three', node.create(5)))),
      'outputs': '[ eight | *-]-->[ two | *-]-->[ three | *-]-->[ 5 | / ]',
-     'reason' : 'node chain with five nodesf'}
+     'reason' : 'node chain with five nodes'}
 ]
 
 
@@ -99,7 +103,6 @@ for t in test_copy:
     expected = t['outputs']
 
     result = a5q1.to_string( a7q6.copy(args_in) )
-
     assert result == expected and (expected is not args_in), \
         'copy(): expected '+str(expected)+', got ' +result+ ' -- '+t['reason']
 
