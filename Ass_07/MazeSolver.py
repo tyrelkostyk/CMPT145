@@ -16,7 +16,8 @@ def MazeSolver(m, s, g):
     '''
     # obtain y & x coordinates, update maze
     y, x = s
-    m[y][x] == 'P'
+    m[y][x] = 'P'
+    print('start; s, g:', s, g)
 
     # base case: reached destination point
     if s == g:
@@ -25,34 +26,34 @@ def MazeSolver(m, s, g):
     # check each cardinal direction for possible path; if open, begin recursive call in that direction
     else:
         # Check east
-        if m[y][x+1] == 0:
-            valid, maze = MazeSolver(m, (y,x+1), g):
+        if (x+1 < len(m[0])) and (m[y][x+1] == 0):
+            valid, maze = MazeSolver(m, (y,x+1), g)
             # if recursive returns True, it returns True & the updated map
             if valid:
                 return valid, maze
                 # otherwise, it exits the "check east" block & proceeds to "check south" block
 
         # check south
-        if m[y-1][x] == 0:
-            valid, maze = MazeSolver(m, (y-1,x), g):
+        if (y+1 < len(m)) and (m[y+1][x] == 0):
+            valid, maze = MazeSolver(m, (y+1,x), g)
             if valid:
                 return valid, maze
 
         # check north
-        if m[y+1][x] == 0:
-            valid, maze = MazeSolver(m, (y-1,x), g):
+        if (m[y-1][x] == 0) and (y > 0):
+            valid, maze = MazeSolver(m, (y-1,x), g)
             if valid:
                 return valid, maze
 
         # check west
-        if m[y][x-1] == 0:
-            valid, maze = MazeSolver(m, (y,x-1), g):
+        if (m[y][x-1] == 0) and (x > 0):
+            valid, maze = MazeSolver(m, (y,x-1), g)
             if valid:
                 return valid, maze
 
         # if none of the cardinal directions worked, return False
         # the previous call will either try a different direction, or return False as well
-        return False
+        return False, None
 
 	# "Disply" path by changing value of cell block to P after traveling through it
 	# (represents path, & can't be accessed afterwards)
@@ -68,3 +69,23 @@ def MazeSolver(m, s, g):
 
 
     return False
+
+m = [[0, 0, 0, 0, 1],
+     [0, 1, 1, 0, 1],
+     [1, 1, 1, 0, 1],]
+s = (0,0)
+g = (2, 3)
+
+m = [[0, 0, 0, 0, 0, 0, 0, 1, 0, 1],
+     [0, 1, 1, 1, 1, 1, 0, 0, 0, 1],
+     [0, 1, 1, 0, 1, 0, 0, 1, 1, 1],
+     [0, 0, 0, 0, 1, 0, 1, 1, 0, 0],
+     [0, 1, 0, 1, 1, 0, 0, 0, 1, 0],
+     [0, 1, 1, 0, 1, 1, 1, 1, 0, 0],
+     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+s = (0,0)
+g = (3, 8)
+
+
+print(len(m[0]))
+print(MazeSolver(m,s,g))
