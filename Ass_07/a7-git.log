@@ -10,6 +10,29 @@ recent on top)
 ####################################################################################
 ####################################################################################
 
+#8
+commit d920bda59e2eda4e79141fc34f2b9b005742e75b (HEAD -> master)
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Mar 17 18:19:05 2018 -0600
+
+    Fully finished & tested MazeSolver.py, including the correct reading of the text
+    files
+
+#8
+commit 9541969f0f1a4b4aeb65f37ed11b2eb7761fa682
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Mar 17 18:40:17 2018 -0600
+
+    finished MazeSolver.py, works with a variety of complicated tests
+
+#7
+commit 9ff1ab5c1777fdc523bdab6b428fe829181da14f (origin/master, origin/HEAD)
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Mar 17 19:03:13 2018 -0600
+
+    Finished first rough draft of MazeSolver.py. Still need to incorporate file I/O,
+    and testing
+
 #6
 commit c061b4b4f80acb4f1cfd8cb05563104776597d02
 Author: tyrelkostyk <tck290@mail.usask.ca>
