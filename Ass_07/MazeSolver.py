@@ -17,7 +17,6 @@ def MazeSolver(m, s, g):
     # obtain y & x coordinates, update maze
     y, x = s
     m[y][x] = 'P'
-    print('start; s, g:', s, g)
 
     # base case: reached destination point
     if s == g:
@@ -54,38 +53,41 @@ def MazeSolver(m, s, g):
         # if none of the cardinal directions worked, return False
         # the previous call will either try a different direction, or return False as well
         return False, None
+    return False, None
 
-	# "Disply" path by changing value of cell block to P after traveling through it
-	# (represents path, & can't be accessed afterwards)
+# create maze from Maze1.txt
+maze_file = open('Maze1.txt', 'r')
+m1 = []
+for line in maze_file:
+    line = line.split()
+    for i in range(len(line)):
+        line[i] = int(line[i])
+    m1.append(line)
 
-	# perhaps a recursive call/loop for every cardinal direction? each iteration, if a direction is open then go
-        # need a system to determine if a given cell block is available or not
-        # map[y +/- 1][x +/- 1] ? for indexing the map, where (y, x) is the current block location
-        #
-	# If returns false, begin iterating over next direction. Do this every call (obviously)
-	# If returns True, also return true, & probably most updated map as well (store in tuple)
-        # if MazeSolver(m, s, g):
-            # return MazeSolver(m, s, g)
+# create maze from Maze2.txt
+maze_file = open('Maze2.txt', 'r')
+m2 = []
+for line in maze_file:
+    line = line.split()
+    for i in range(len(line)):
+        line[i] = int(line[i])
+    m2.append(line)
 
+# create maze from Maze3.txt
+maze_file = open('Maze3.txt', 'r')
+m3 = []
+for line in maze_file:
+    line = line.split()
+    for i in range(len(line)):
+        line[i] = int(line[i])
+    m3.append(line)
 
-    return False
+# set start & end points
+s1, g1 = (0,3), (4,5)
+s2, g2 = (0,0), (8,9)
+s3, g3 = (3,0), (23,30)
 
-m = [[0, 0, 0, 0, 1],
-     [0, 1, 1, 0, 1],
-     [1, 1, 1, 0, 1],]
-s = (0,0)
-g = (2, 3)
-
-m = [[0, 0, 0, 0, 0, 0, 0, 1, 0, 1],
-     [0, 1, 1, 1, 1, 1, 0, 0, 0, 1],
-     [0, 1, 1, 0, 1, 0, 0, 1, 1, 1],
-     [0, 0, 0, 0, 1, 0, 1, 1, 0, 0],
-     [0, 1, 0, 1, 1, 0, 0, 0, 1, 0],
-     [0, 1, 1, 0, 1, 1, 1, 1, 0, 0],
-     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
-s = (0,0)
-g = (3, 8)
-
-
-print(len(m[0]))
-print(MazeSolver(m,s,g))
+# test the programs
+print(MazeSolver(m1, s1, g1))
+print(MazeSolver(m2, s2, g2))
+print(MazeSolver(m3, s3, g3))
