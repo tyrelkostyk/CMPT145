@@ -13,7 +13,7 @@ def is_leaf(tnode):
     Return:
         True if the tnode has zero children
     """
-    return TN.get_left(tnode) is None and TN.get_right(tnode) is None
+    return tn.get_left(tnode) is None and tn.get_right(tnode) is None
 
 
 def to_string(tnode, level=0):

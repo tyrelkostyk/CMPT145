@@ -4,7 +4,7 @@
 
 import treenode as tn
 import traversals as trav
-import treefunctions as TreeF
+import treefunctions as tnfun
 
 def subst(tnode, t, r):
     """
@@ -19,13 +19,17 @@ def subst(tnode, t, r):
     :returns:
         None
     """
-    # check if tnode is empty
-    if TreeF.is_leaf(tnode):
+    # base case one: tnode is empty
+    if tnode is None:
         return None
-
+        
     # replace t with r, if data is t
-    elif tn.get_data(tnode) == t:
+    if tn.get_data(tnode) == t:
         tn.set_data(tnode, r)
+
+    # base case two: tnode is has no children
+    if tnfun.is_leaf(tnode):
+        return None
 
     # recursively call subst() on left & right children
     subst(tn.get_left(tnode), t, r)
