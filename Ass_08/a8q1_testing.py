@@ -77,6 +77,7 @@ for t in test_subst:
         print('Error in subst(): expected output', expected,
               'but found', test_tree, '---', t['reason'])
 
+
 ## Testing copy()
 test_copy = [
     {'inputs'  : tn.create(5),
@@ -118,5 +119,72 @@ for t in test_copy:
     if (tree_replica is expected):
         print('Error in copy(): copy has same reference as original')
 
+
+## Testing collect_data_in_order()
+test_cdio = [
+    {'inputs'  : tn.create(5),
+     'expected': [5],
+     'reason'  : 'single-leaf tree'},
+    {'inputs'  : tn.create(5,
+                    tn.create(4),
+                    tn.create(7)),
+     'expected': [4,5,7],
+     'reason'  : 'multi-node tree'},
+    {'inputs'  : tn.create(5,tn.create(2,tn.create(1,None,None),
+                                         tn.create(1,tn.create(0,None,None),
+                                                     tn.create(1,None,None))),
+                             tn.create(3,tn.create(1,tn.create(0,None,None),
+                                                     tn.create(1,None,None)),
+                                         tn.create(2,tn.create(1,None,None),
+                                                     tn.create(1,tn.create(0,None,None),
+                                                                 tn.create(1,None,None))))),
+     'expected': [1,2,0,1,1,5,0,1,1,3,1,2,0,1,1],
+     'reason'  : 'fairly large tree'}
+]
+
+for t in test_cdio:
+    args_in = t['inputs']
+    expected = t['expected']
+
+    result = a8q1.collect_data_in_order(args_in)
+
+    if result != expected:
+        print('Error in cdio(): expected output', expected,
+              'but found', result, '---', t['reason'])
+
+
+## Testing count_smaller()
+test_count_smaller = [
+    {'inputs'  : [tn.create(5), 5],
+     'expected': 0,
+     'reason'  : 'single-leaf tree, no values smaller than target'},
+    {'inputs'  : [tn.create(5,
+                    tn.create(4),
+                    tn.create(7)),
+                    5],
+     'expected': 1,
+     'reason'  : 'multi-node tree'},
+    {'inputs'  : [tn.create(5,tn.create(2,tn.create(1,None,None),
+                                         tn.create(1,tn.create(0,None,None),
+                                                     tn.create(1,None,None))),
+                             tn.create(3,tn.create(1,tn.create(0,None,None),
+                                                     tn.create(1,None,None)),
+                                         tn.create(2,tn.create(1,None,None),
+                                                     tn.create(1,tn.create(0,None,None),
+                                                                 tn.create(1,None,None))))),
+                    3],
+     'expected': 13,
+     'reason'  : 'fairly large tree'}
+]
+
+for t in test_count_smaller:
+    args_in = t['inputs']
+    expected = t['expected']
+
+    result = a8q1.count_smaller(args_in[0], args_in[1])
+
+    if result != expected:
+        print('Error in count_smaller(): expected output', expected,
+              'but found', result, '---', t['reason'])
 
 print('*** Test Script Complete ***')
