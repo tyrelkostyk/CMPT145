@@ -3,7 +3,6 @@
 ## a8q1.py
 
 import treenode as tn
-import traversals as trav
 import treefunctions as tnfun
 
 def subst(tnode, t, r):

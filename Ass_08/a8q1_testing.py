@@ -4,7 +4,6 @@
 
 import treenode as tn
 import treefunctions as treefun
-import exampletrees as extree
 import a8q1
 
 
