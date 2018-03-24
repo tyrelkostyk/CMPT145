@@ -2,7 +2,7 @@
 # Defines a few example trees
 
 import treenode as tn
-
+import treefunctions as tnfun
 
 atree = tn.create(2)
 a = tn.create(7)

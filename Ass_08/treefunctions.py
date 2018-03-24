@@ -2,6 +2,8 @@
 # Defines some helpful functions for trees
 #
 
+import treenode as tn
+
 def is_leaf(tnode):
     """
     Purpose:
