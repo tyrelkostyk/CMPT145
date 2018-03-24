@@ -2,9 +2,11 @@
 ## CMPT145-04, Lab Section 04
 ## a8q1_testing.py
 
+
 import treenode as tn
 import treefunctions as tnfun
 import a8q2
+
 
 ## Testing mirrored()
 test_mirrored = [
