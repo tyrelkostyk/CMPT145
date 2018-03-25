@@ -16,10 +16,6 @@ def complete(tnode):
     :returns:
         True, height; if a complete Binary Tree. False, None; otherwise
     """
-    # bad complete implementation below
-    # rewrite so cmplt returns flag, height (tuple)
-    # make it work?
-    # properly test it
     def cmplt(tnode):
         if tnode is None:
             return True, 0
