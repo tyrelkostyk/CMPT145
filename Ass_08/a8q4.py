@@ -5,6 +5,11 @@
 import treenode as tn
 import treefunctions as tnfun
 
+## NOTE:
+# I may have misinterpreted the question; I thought that an ordered node was only
+# ordered if the root was larger than the SUM of the values in the left subtree,
+# and less than the SUM of the value in the right subtree... My mistake
+
 def ordered(tnode):
     """
     :purpose:
