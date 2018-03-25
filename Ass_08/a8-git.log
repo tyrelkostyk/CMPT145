@@ -1,0 +1,55 @@
+## Tyrel Kostyk, tck290, 11216033
+## CMPT145-04, Lab Section 04
+## a8-git.log
+
+### NOTE TO MARKER: I don't use PyCharm (I prefer Atom). I also use my own preferred
+method of version control using Git Bash (on GitHub). This is why my format may look
+slightly different than what you're expecting. PS; they're in descending order (most
+recent on top)
+
+####################################################################################
+####################################################################################
+
+#6
+commit 7581b9cef81ee46d98df3a029b58ce0e1163ef9f (HEAD -> master)
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Fri Mar 23 19:59:11 2018 -0600
+
+    fixed small bug in a8q2.py, now working for all test cases, thus finished
+    a8q2.py
+
+#5
+commit 090898b947de567e94a455cf043f3e3df8daf9b0
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Fri Mar 23 19:52:41 2018 -0600
+
+    Finished a8q2.py script, began testing, currently not working
+
+#4
+commit b2c163565726ce67bdde064fcc6f7d374d133e75
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Fri Mar 23 15:16:29 2018 -0600
+
+    Finished writing & testing collect_data_in_order() & count_smaller(), thus
+    finished a8q1.py
+
+#3
+commit e755ed96d3160e8813ce7bc83ee91a55ee968b59
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Fri Mar 23 14:03:40 2018 -0600
+
+    Finished writing & testing copy() in a8q1.py
+
+#2
+commit 5484e2c28c1527ae9fb9032260325ce211a4ab38
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Fri Mar 23 13:29:04 2018 -0600
+
+    finished appropriate testing of subst(), passed with flying colours
+
+#1
+commit ba6e429fe3eaf624c6fcf8ef184de3c973c32db7
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Fri Mar 23 13:00:55 2018 -0600
+
+    Finished first draft of subst() in a8q1.py. Will now bein testing

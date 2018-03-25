@@ -1,6 +1,6 @@
 ## Tyrel Kostyk, tck290, 11216033
 ## CMPT145-04, Lab Section 04
-## a8q1_testing.py
+## a8q2_testing.py
 
 
 import treenode as tn

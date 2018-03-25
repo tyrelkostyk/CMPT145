@@ -1,6 +1,6 @@
 ## Tyrel Kostyk, tck290, 11216033
 ## CMPT145-04, Lab Section 04
-## a8q1.py
+## a8q2.py
 
 import treenode as tn
 import treefunctions as tnfun
@@ -10,8 +10,8 @@ def mirrored(t1, t2):
     :purpose:
         Determines if two trees satisfy the mirror property
     :params:
-        t1 - 'target', data value to be replaced
-        t2 - 'target', data value to be replaced
+        t1 - treenode, already created
+        t2 - treenode, already created
     :post-conditions:
         none
     :returns:
