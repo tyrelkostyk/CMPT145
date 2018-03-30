@@ -33,8 +33,6 @@ class GradeItem(object):
         self.scored = scored
         self.out_of = out_of
 
-        self.final_exam = None
-        self.assignments = []
 
     def __str__(self):
         """
@@ -93,6 +91,9 @@ class StudentRecord(object):
         self.id = st_number
         self.midterm = None
         self.labs = []
+
+        self.final_exam = None
+        self.assignments = []
 
 
     def drop_lowest(self, grades):
