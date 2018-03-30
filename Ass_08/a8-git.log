@@ -10,10 +10,17 @@ recent on top)
 ####################################################################################
 ####################################################################################
 
+#9
+commit a0b34fc88bcd758741b55a5142c8a7108250c9fe (HEAD -> master)
+Author: tyrelkostyk <tck290@mail.usask.ca>
+Date:   Sat Mar 24 21:16:38 2018 -0600
+
+    Finished & Tested ordered() in a8q4.py, working for all test cases
+
 #8
 commit 75401b43546a48eaf8e405900da5fe8abba3ab88 (HEAD -> master)
 Author: tyrelkostyk <tck290@mail.usask.ca>
-Date:   Sat Mar 24 19:39:58 2018 -0600
+Date:   Sat Mar 24 20:39:58 2018 -0600
 
     Finished first draft of a8q4. Now to test
 

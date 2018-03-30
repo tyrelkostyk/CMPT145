@@ -8,7 +8,8 @@ import treefunctions as tnfun
 ## NOTE:
 # I may have misinterpreted the question; I thought that an ordered node was only
 # ordered if the root was larger than the SUM of the values in the left subtree,
-# and less than the SUM of the value in the right subtree... My mistake
+# rather than all the values themselves (individually) and same idea for the right
+# side except less than... My mistake (at least it works tho :p)
 
 def ordered(tnode):
     """
