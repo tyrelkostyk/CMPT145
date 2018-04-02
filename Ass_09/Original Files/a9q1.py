@@ -1,8 +1,3 @@
-## Tyrel Kostyk, tck290, 11216033
-## CMPT145-04, Lab Section 04
-## a9 due Monday April 2nd 2018
-
-
 # CMPT 145: Objects and Classes
 # 201801 Assignment 9 Question 1
 # Defines the GradeItem and the Student class
@@ -32,7 +27,6 @@ class GradeItem(object):
         self.weight = weight
         self.scored = scored
         self.out_of = out_of
-
 
     def __str__(self):
         """
@@ -89,13 +83,8 @@ class StudentRecord(object):
         self.first_name = first
         self.last_name = last
         self.id = st_number
-
-        self.labs = []
-        self.assignments = []
-
         self.midterm = None
-        self.final_exam = None
-
+        self.labs = []
 
 
     def drop_lowest(self, grades):
@@ -109,15 +98,8 @@ class StudentRecord(object):
         Return:
             :return: None
         """
-        tmp =[]
-        for k in grades:
-            tmp.append(k.scored)
+        pass
 
-        for i in range(len(tmp)):
-            if tmp[i] == min(tmp):
-                grades[i].weight = 0
-                return
-        return
 
     def calculate(self):
         """
@@ -126,10 +108,8 @@ class StudentRecord(object):
         Return:
             The final grade.
         """
-        return round(self.midterm.contribution() + self.final_exam.contribution()
-                     + sum([a.contribution() for a in self.assignments])
+        return round(self.midterm.contribution()
                      + sum([b.contribution() for b in self.labs]))
-
 
     def display(self):
         """
@@ -138,22 +118,14 @@ class StudentRecord(object):
             all lab and assignment grades, and the calculation of the total grade.
         :return:
         """
-        print("Student:", self.first_name, self.last_name,
+        print("Student:", self.first_name, self.last_name, 
               '(' + self.id + ')')
         print("\tCourse grade:", self.calculate())
         print('\tMidterm:', str(self.midterm))
-        print('\tFinal Exam:', str(self.final_exam))
+        #
 
         print('\tLabs:', end=" ")
         for g in self.labs:
-            if g.weight == 0:
-                print('[' + str(g) + ']', end=' ')
-            else:
-                print(str(g), end=' ')
-        print()
-
-        print('\tAssignments:', end=" ")
-        for g in self.assignments:
             if g.weight == 0:
                 print('[' + str(g) + ']', end=' ')
             else:
@@ -203,11 +175,7 @@ def read_student_record_file(filename):
         for g,o,w in zip(labs,lab_out_of,lab_weights):
             student.labs.append(GradeItem(w,g,o))
 
-        for g,o,w in zip(assignments,assignments_out_of,assignment_weights):
-            student.assignments.append(GradeItem(w,g,o))
-
         student.midterm = GradeItem(mt_weight,int(student_line[23]),mt_out_of)
-        student.final_exam = GradeItem(final_weight,int(student_line[24]),final_out_of)
 
         students.append(student)
 
@@ -229,3 +197,4 @@ if __name__ == '__main__':
     print('------------- After ----------------')
     for s in course:
         s.display()
+
