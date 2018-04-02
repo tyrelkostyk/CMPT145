@@ -91,7 +91,7 @@ test_counter = ErrorCounter('BST primitive operations: ')
 def gen_val(key):
     """Given a key, return a string that can’t be mistaken as the key itself"""
     return 'value_for_'+str(key)
-    
+
 ###############################################################################################
 reason = 'insert_prim() singleton test'
 print('---Test phase:', reason, '---')
@@ -247,6 +247,7 @@ for v in ['seven', 'eleven']:
 
 
 ###############################################################################################
+
 reason = 'delete_prim() negatives test'
 print('---Test phase:', reason, '---')
 atnode = None
@@ -277,5 +278,6 @@ for v in keys:
             flag, newvalue = a9q2.member_prim(newtree, vv)
             test_counter.expecting( flag, reason + ': member could not find key in non-trivial tree after deletion')
             test_counter.expecting( newvalue == gen_val(vv), reason + ': member could not find value in non-trivial tree after deletion')
+
 
 test_counter.final_report()

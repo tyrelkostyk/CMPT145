@@ -1,3 +1,8 @@
+## Tyrel Kostyk, tck290, 11216033
+## CMPT145-04, Lab Section 04
+## a9 due Monday April 2nd 2018
+
+
 # CMPT 145: Primitive Binary Search Trees
 # Defines functions for primitive Binary Search Tree data structure
 #
@@ -57,6 +62,23 @@ def insert_prim(tnode, key, value):
         flag is False if the value is already in the tree,
                 the value stored with the key is changed
     """
+    if tnode is None:
+        return True, TN.KVTreeNode(key, value)
+    else:
+        if tnode.key is key:
+            return False, tnode
+        elif key < tnode.key:
+            left, left_val = insert_prim(tnode.left, key, value)
+            if left:
+                tnode.left = left_val
+                return True, tnode
+            return True, tnode
+        else:
+            right, right_val = insert_prim(tnode.right, key, value)
+            if right:
+                tnode.right = right_val
+                return True, tnode
+            return True, tnode
 
     return False, None
 
@@ -81,4 +103,3 @@ def delete_prim(tnode, key):
     """
 
     return False, None
-

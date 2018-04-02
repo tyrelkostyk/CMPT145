@@ -64,7 +64,7 @@ def insert_prim(tnode, value):
             return False, tnode
         elif value < tnode.data:
             left, left_val = insert_prim(tnode.left, value)
-            if left_val:
+            if left:
                 tnode.left = left_val
                 return True, tnode
             return True, tnode
@@ -132,4 +132,3 @@ def delete_prim(tnode, target):
             return True, left
 
     return delete(tnode)
-

@@ -234,3 +234,9 @@ if __name__ == '__main__':
     print('------------- After ----------------')
     for s in course:
         s.display()
+
+    print('--------- Class Average ------------')
+    final_grades = []
+    for s in course:
+        final_grades.append(s.calculate())
+    print('The Class Average is', str(sum(final_grades)/len(final_grades))+'%')
