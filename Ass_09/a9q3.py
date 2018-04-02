@@ -22,7 +22,7 @@ class Table(object):
         Return:
             :return: the number of key,value pairs in the table
         """
-        return 0
+        return self.__size
 
     def is_empty(self):
         """
@@ -31,7 +31,7 @@ class Table(object):
         Return:
             :return: True if the table is empty
         """
-        return False
+        return self.__size == 0
 
     def retrieve(self, key):
         """
@@ -44,6 +44,10 @@ class Table(object):
             :return: True, value if the key appears in the table
                      False, None otherwise
         """
+        # Find & Retrieve the value associated with the given key (if it exists)
+        flag, value = prim.member_prim(self.__root, key)
+        if flag:
+            return True, value
         return False, None
 
     def insert(self, key, value):
@@ -59,6 +63,11 @@ class Table(object):
             :return: True if the key,value was inserted
                      False if the value of an existing key was changed
         """
+        flag, tree = prim.insert_prim(self.__root, key, value)
+        if flag:
+            self.__root = tree
+            self.__size += 1
+            return True
         return False
 
     def delete(self, key):
@@ -72,6 +81,11 @@ class Table(object):
         Return
             :return: True if the key,value was deleted
         """
+        flag, tree = prim.delete_prim(self.__root, key)
+        if flag:
+            self.__root = tree
+            self.__size -= 1
+            return True
         return False
 
     def in_order(self):
@@ -90,5 +104,3 @@ class Table(object):
                 return before + this + after
 
         return in_order_prim(self.__root)
-
-

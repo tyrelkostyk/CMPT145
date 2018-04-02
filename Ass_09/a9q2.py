@@ -50,19 +50,22 @@ def insert_prim(tnode, key, value):
         return True, TN.KVTreeNode(key, value)
     else:
         if tnode.key is key:
+            tnode.value = value
             return False, tnode
         elif key < tnode.key:
             left, left_val = insert_prim(tnode.left, key, value)
             if left:
                 tnode.left = left_val
                 return True, tnode
-            return True, tnode
+            else:
+                return False, tnode
         else:
             right, right_val = insert_prim(tnode.right, key, value)
             if right:
                 tnode.right = right_val
                 return True, tnode
-            return True, tnode
+            else:
+                return False, tnode
 
     return False, None
 
