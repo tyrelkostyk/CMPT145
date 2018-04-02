@@ -109,11 +109,16 @@ class StudentRecord(object):
         Return:
             :return: None
         """
-        tmp =[]
-        for k in grades:
-            tmp.append(k.scored)
+        # create temp list, contatins scored / out_of, in order to get min val
+        tmp =[(k.scored)/(k.out_of) for k in grades]
 
-        for i in range(len(tmp)):
+        # redistribute weight of remaining items in grades;
+        # must still add to same "total weight" for list of grades (i.e. labs must still weigh 10% total)
+        for j in range(len(grades)):
+            grades[j].weight += (grades[j].weight / (len(grades)-1) )
+
+        # set weight to zero for lowest scored item
+        for i in range(len(grades)):
             if tmp[i] == min(tmp):
                 grades[i].weight = 0
                 return
